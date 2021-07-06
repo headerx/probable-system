@@ -17,7 +17,7 @@ use Turbine\Concerns\CascadeRestores;
 use Turbine\Concerns\HasIterativeQuickSort;
 use Turbine\Concerns\HasUuid;
 use Turbine\Icons\Casts\IconIdCast;
-use Turbine\Icons\Concerns\HasIcon;
+use HeaderX\BukuIcons\Concerns\HasIcon;
 use Turbine\Menus\Casts\SnakeCast;
 use Turbine\Menus\Enums\MenuItemTypeEnum;
 use Turbine\Menus\Enums\MenuTemplateEnum;

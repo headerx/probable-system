@@ -22,7 +22,7 @@ use Turbine\Concerns\HasUuid;
 use Turbine\Auth\Models\Role;
 use Turbine\Auth\Models\User;
 use Turbine\Icons\Casts\IconIdCast;
-use Turbine\Icons\Concerns\HasIcon;
+use HeaderX\BukuIcons\Concerns\HasIcon;
 use Turbine\Menus\Casts\SnakeCast;
 use Turbine\Menus\Contracts\HasPath;
 use Turbine\Menus\Enums\MenuItemTemplateEnum;
