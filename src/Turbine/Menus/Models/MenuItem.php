@@ -21,7 +21,6 @@ use Turbine\Concerns\HasIterativeQuickSort;
 use Turbine\Concerns\HasUuid;
 use Turbine\Auth\Models\Role;
 use Turbine\Auth\Models\User;
-use Turbine\Icons\Casts\IconIdCast;
 use HeaderX\BukuIcons\Concerns\HasIcon;
 use Turbine\Menus\Casts\SnakeCast;
 use Turbine\Menus\Contracts\HasPath;
@@ -52,7 +51,6 @@ class MenuItem extends Model implements Sortable, HasPath
     protected $casts = [
         'type' => MenuItemTypeEnum::class,
         'template' => MenuItemTemplateEnum::class,
-        'icon_id' => IconIdCast::class,
         'active' => 'bool',
         'handle' => SnakeCast::class,
     ];

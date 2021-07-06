@@ -16,7 +16,6 @@ use Turbine\Concerns\CascadeDeactivates;
 use Turbine\Concerns\CascadeRestores;
 use Turbine\Concerns\HasIterativeQuickSort;
 use Turbine\Concerns\HasUuid;
-use Turbine\Icons\Casts\IconIdCast;
 use HeaderX\BukuIcons\Concerns\HasIcon;
 use Turbine\Menus\Casts\SnakeCast;
 use Turbine\Menus\Enums\MenuItemTypeEnum;
@@ -42,7 +41,6 @@ class Menu extends Model implements Sortable
         'type' => MenuTypeEnum::class,
         'template' => MenuTemplateEnum::class,
         'active' => 'bool',
-        'icon_id' => IconIdCast::class,
         'handle' => SnakeCast::class,
     ];
 
