@@ -42,7 +42,6 @@ build:
 	done
 
 install:
-	$(MAKE) build
 	cd $(BUILD_DIR); \
 	$(PHP) artisan jetstream:install livewire; \
 	$(PHP) artisan vendor:publish --tag=jetstream-views -n; \
