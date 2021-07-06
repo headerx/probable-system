@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Laravel\Passport\Passport;
+use Turbine\Auth\Actions\BootComponentProviderAction;
 use Turbine\Auth\Actions\BootComposerProviderAction;
 use Turbine\Auth\Actions\BootGateProviderAction;
 use Turbine\Auth\Concerns\RegistersAuthLivewireComponents;
@@ -27,13 +28,16 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(
         BootComposerProviderAction $bootComposerProviderAction,
-        BootGateProviderAction $bootGateProviderAction
+        BootGateProviderAction $bootGateProviderAction,
+        BootComponentProviderAction $bootComponentProviderAction
     ) {
         $this->registerPolicies();
 
         $authViewComposer = ($bootComposerProviderAction)();
 
         $authGates = ($bootGateProviderAction)();
+
+        $authComponents = ($bootComponentProviderAction)();
 
         Passport::routes();
 

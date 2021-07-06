@@ -38,10 +38,10 @@ class CreateIconsTable extends Migration
     {
         $this->schema->create('icons', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('icon_set_id');
+            $table->unsignedInteger('icon_set_id')->nullable();
             $table->string('name');
-            $table->json('keywords');
-            $table->boolean('outlined');
+            $table->text('keywords')->nullable();
+            $table->boolean('outlined')->nullable();
             $table->timestamps();
         });
     }

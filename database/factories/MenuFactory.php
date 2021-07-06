@@ -3,8 +3,8 @@
 namespace Database\Factories;
 
 use Database\Factories\Concerns\GetsIcons;
+use HeaderX\BukuIcons\Models\Icon;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Turbine\Icons\Models\Icon;
 use Turbine\Menus\Enums\MenuTemplateEnum;
 use Turbine\Menus\Enums\MenuTypeEnum;
 use Turbine\Menus\Models\Menu;
@@ -33,13 +33,11 @@ class MenuFactory extends Factory
             'type' => $this->faker->randomElement(MenuTypeEnum::toValues()),
             'template' => $this->faker->randomElement(MenuTemplateEnum::toValues()),
             'active' => rand(0, 1),
-            'icon_id' => Icon::firstOrCreate([
-                'class' => $this->faker->randomElement($this->getIcons()),
+            'icon_id' => (Icon::firstOrCreate([
+                'name' => $this->faker->randomElement($this->getIcons()),
             ], [
-                'class' => $this->faker->randomElement($this->getIcons()),
-                'source' => 'FontAwesome',
-                'version' => config('fontawesome.version'),
-            ]),
+                'name' => $this->faker->randomElement($this->getIcons()),
+            ]))->id,
         ];
     }
 

@@ -1,7 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-    mode: 'jit',
     purge: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './vendor/laravel/jetstream/**/*.blade.php',
@@ -10,25 +9,27 @@ module.exports = {
     ],
 
     theme: {
-        colors: {
-            ...defaultTheme.colors,
-            scarlet: {
-                100: '#FFEAE9',
-                200: '#FFCBC7',
-                300: '#FFABA5',
-                400: '#FF6C62',
-                500: '#FF2D1F',
-                600: '#E6291C',
-                700: '#991B13',
-                800: '#73140E',
-                900: '#4D0E09',
-            },
-        },
         extend: {
             fontFamily: {
-                sans: ['Mulish', ...defaultTheme.fontFamily.sans],
-                hind: ['Hind', ...defaultTheme.fontFamily.sans],
+                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
+            gridTemplateColumns: {
+                // Simple 16 column grid
+               '16': 'repeat(16, minmax(0, 1fr))',
+                // Simple 18 column grid
+               '18': 'repeat(18, minmax(0, 1fr))',
+
+               '20': 'repeat(20, minmax(0, 1fr))',
+               '22': 'repeat(22, minmax(0, 1fr))',
+               '24': 'repeat(24, minmax(0, 1fr))',
+               '26': 'repeat(26, minmax(0, 1fr))',
+            }
+        },
+    },
+
+    variants: {
+        extend: {
+            opacity: ['disabled'],
         },
     },
 

@@ -4,7 +4,7 @@ namespace Turbine\Auth\Http\Livewire;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Livewire\Component;
-use Support\Concerns\InteractsWithBanner;
+use Turbine\Concerns\InteractsWithBanner;
 use Turbine\Auth\Actions\ClearUserSessionsAction;
 use Turbine\Auth\Models\User;
 use Turbine\Livewire\Concerns\HasModel;

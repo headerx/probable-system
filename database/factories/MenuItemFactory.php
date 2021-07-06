@@ -3,9 +3,9 @@
 namespace Database\Factories;
 
 use Database\Factories\Concerns\GetsIcons;
+use HeaderX\BukuIcons\Models\Icon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Arr;
-use Turbine\Icons\Models\Icon;
 use Turbine\Menus\Enums\MenuItemTargetEnum;
 use Turbine\Menus\Enums\MenuItemTemplateEnum;
 use Turbine\Menus\Enums\MenuItemTypeEnum;
@@ -47,13 +47,11 @@ class MenuItemFactory extends Factory
             'active' => $this->faker->randomElement([1, 0]),
             'menu_id' => $this->faker->randomElement(Menu::all()->pluck('id')),
             'parent_id' => $this->faker->randomElement(MenuItem::all()->pluck('id')),
-            'icon_id' => Icon::firstOrCreate([
-                'class' => $this->faker->randomElement($this->getIcons()),
+            'icon_id' => (Icon::firstOrCreate([
+                'name' => $this->faker->randomElement($this->getIcons()),
             ], [
-                'class' => $this->faker->randomElement($this->getIcons()),
-                'source' => 'FontAwesome',
-                'version' => config('fontawesome.version'),
-            ]),
+                'name' => $this->faker->randomElement($this->getIcons()),
+            ]))->id,
         ];
     }
 

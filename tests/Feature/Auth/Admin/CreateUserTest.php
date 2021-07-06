@@ -18,6 +18,7 @@ class CreateUserTest extends TestCase
     public function an_admin_can_access_the_users_page()
     {
         $this->loginAsAdmin();
+        // $this->withoutExceptionHandling();
 
         $response = $this->get('/admin/users');
 

@@ -7,13 +7,13 @@
         @include('admin.users.header-actions')
     </x-slot>
 
-    <livewire:core::admin.users.livewire-datatable.datatable />
+    <livewire:turbine.auth.users-table />
 </x-7xl>
 
-<livewire:core::admin.users.create />
-<livewire:core::admin.users.edit />
-<livewire:core::admin.users.change-password />
-<livewire:core::admin.users.clear-sessions />
-<livewire:core::admin.users.delete />
-<livewire:core::admin.users.deactivate />
+<livewire:turbine.auth.create-user-form />
+<livewire:turbine.auth.edit-user-form />
+<livewire:turbine.auth.edit-user-password-form />
+<livewire:turbine.auth.clear-user-session-dialog />
+<livewire:turbine.auth.delete-user-dialog />
+<livewire:turbine.auth.deactivate-user-dialog />
 
