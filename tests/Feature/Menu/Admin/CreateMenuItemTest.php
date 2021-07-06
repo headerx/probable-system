@@ -1,0 +1,70 @@
+<?php
+
+namespace Tests\Feature\Menu\Admin;
+
+use Livewire;
+use Turbine\Icons\Models\Icon;
+use Turbine\Menus\Enums\MenuItemTypeEnum;
+use Turbine\Menus\Http\Livewire\Admin\CreateMenuItemForm;
+use Tests\TestCase;
+
+class CreateMenuItemTest extends TestCase
+{
+    /** @test */
+    public function an_admin_can_access_the_menus_page()
+    {
+        $this->loginAsAdmin();
+
+        $this->withoutExceptionHandling();
+
+        $response = $this->get('/admin/menus');
+
+        $response->assertOk();
+    }
+
+    /** @test */
+    public function admin_can_create_a_menu_item()
+    {
+        $this->withoutExceptionHandling();
+        $this->loginAsAdmin();
+
+        Livewire::test(CreateMenuItemForm::class)
+            ->set(['state' => [
+                'name' => 'test',
+                'handle' => 'test',
+                'uri' => 'test',
+                'type' => MenuItemTypeEnum::menu_item(),
+                'template' => 'default',
+                'target' => '_self',
+                'active' => '1',
+                'title' => 'test',
+                'icon_id' => Icon::find(1)->html,
+            ]])
+            ->call('createMenuItem');
+
+        $this->assertDatabaseHas(
+            'menu_items',
+            [
+                'name' => 'test',
+                'handle' => 'test',
+                'uri' => 'test',
+                'type' => MenuItemTypeEnum::menu_item()->value,
+                'template' => 'default',
+                'target' => '_self',
+                'active' => '1',
+                'title' => 'test',
+                'icon_id' => 1,
+            ]
+        );
+    }
+
+    /** @test */
+    public function create_menu_item_requires_validation()
+    {
+        $this->loginAsAdmin();
+
+        Livewire::test(CreateMenuItemForm::class)
+            ->call('createMenuItem')
+            ->assertHasErrors(['handle']);
+    }
+}

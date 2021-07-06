@@ -4,7 +4,7 @@ namespace Turbine\Auth\Models;
 
 use Database\Factories\RoleFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Megalith\Menus\Concerns\HasMenuItems;
+use Turbine\Menus\Concerns\HasMenuItems;
 use Spatie\Permission\Models\Role as SpatieRole;
 use Turbine\Auth\Concerns\GetsAuthConnection;
 use Turbine\Auth\Concerns\HasPermissionsLabel;

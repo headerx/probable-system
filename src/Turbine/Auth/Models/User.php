@@ -32,7 +32,7 @@ class User extends Authenticatable
     use HasChildren;
     use HasApiTokens;
     use HasFactory;
-    // use HasMenuItems;
+    use HasMenuItems;
     use HasPermissionsLabel;
     use HasProfilePhoto;
     use HasRoles;
