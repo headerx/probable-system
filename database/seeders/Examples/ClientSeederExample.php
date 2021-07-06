@@ -16,7 +16,9 @@ class ClientSeederExample extends Seeder
     public function run()
     {
         Client::withoutEvents(function () {
-            return Client::create([
+            return Client::firstOrCreate([
+                'id' => '12345678-9abc-defg-hijk-lmnopqrstuvw',
+            ], [
                 'id' => '12345678-9abc-defg-hijk-lmnopqrstuvw',
                 'user_id' => 1,
                 'name' => 'Example',

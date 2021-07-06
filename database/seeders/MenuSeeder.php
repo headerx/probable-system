@@ -83,7 +83,7 @@ class MenuSeeder extends Seeder
             'uri' => '/dashboard',
             'active' => true,
             'title' => 'Dashboard',
-            'icon_id' => 'fas-fa-tachometer-alt',
+            'icon_id' => 'fas-tachometer-alt',
         ]);
 
         $guestMenu = Menu::create([
