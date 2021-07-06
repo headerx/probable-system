@@ -2,7 +2,7 @@
 
 namespace Turbine\Menus\Http\Livewire\Admin;
 
-use Support\Concerns\InteractsWithBanner;
+use Turbine\Concerns\InteractsWithBanner;
 use Turbine\Livewire\BaseEditForm;
 use Turbine\Livewire\Concerns\HandlesSelectIconEvent;
 use Turbine\Menus\Actions\SaveAsMenuItemAction;

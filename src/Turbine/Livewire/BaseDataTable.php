@@ -3,7 +3,7 @@
 namespace Turbine\Livewire;
 
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
-use Support\Concerns\InteractsWithBanner;
+use Turbine\Concerns\InteractsWithBanner;
 use Turbine\Livewire\Concerns\InteractsWithDialog;
 
 /**

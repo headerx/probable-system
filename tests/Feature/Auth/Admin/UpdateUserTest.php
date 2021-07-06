@@ -39,7 +39,7 @@ class UpdateUserTest extends TestCase
                 'name' => 'John Doe',
                 'email' => 'john@example.com',
                 'roles' => [
-                    Role::whereName(config('core.admin.role'))->first()->id,
+                    Role::whereName(config('turbine.admin.role'))->first()->id,
                 ],
                 'menuItems' => [
                     $menuItem->id,
@@ -56,7 +56,7 @@ class UpdateUserTest extends TestCase
         ]);
 
         $this->assertDatabaseHas('model_has_roles', [
-            'role_id' => Role::whereName(config('core.admin.role'))->first()->id,
+            'role_id' => Role::whereName(config('turbine.admin.role'))->first()->id,
             'model_type' => User::class,
             'model_id' => User::whereEmail('john@example.com')->first()->id,
         ]);

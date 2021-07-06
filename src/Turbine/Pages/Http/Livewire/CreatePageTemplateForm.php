@@ -4,7 +4,7 @@ namespace Turbine\Pages\Http\Livewire;
 
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
-use Support\Concerns\InteractsWithBanner;
+use Turbine\Concerns\InteractsWithBanner;
 use Turbine\Livewire\BaseCreateForm;
 use Turbine\Pages\Models\PageTemplate;
 

@@ -22,7 +22,7 @@ class ClientSeederExample extends Seeder
                 'name' => 'Example',
                 'secret' => 'examplsecretchangemenow!',
                 'provider' => null,
-                'redirect' => config('core.examples.clients.redirect'),
+                'redirect' => config('turbine.examples.clients.redirect'),
                 'personal_access_client' => false,
                 'password_client' => false,
                 'revoked' => false,

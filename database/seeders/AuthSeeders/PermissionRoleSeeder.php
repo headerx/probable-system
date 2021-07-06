@@ -19,7 +19,7 @@ class PermissionRoleSeeder extends Seeder
 
     public function __construct()
     {
-        $this->connection = config('core.auth.connection');
+        $this->connection = config('turbine.auth.connection');
     }
 
     /**
@@ -35,7 +35,7 @@ class PermissionRoleSeeder extends Seeder
         Role::create([
             'id' => 1,
             'type' => UserTypeEnum::admin(),
-            'name' => config('core.admin.role'),
+            'name' => config('turbine.admin.role'),
         ]);
 
         // Non Grouped Permissions

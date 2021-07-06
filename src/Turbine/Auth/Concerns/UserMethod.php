@@ -26,7 +26,7 @@ trait UserMethod
 
     public function hasAllAccess(): bool
     {
-        return $this->isAdmin() && $this->hasRole(config('core.admin.role'));
+        return $this->isAdmin() && $this->hasRole(config('turbine.admin.role'));
     }
 
     /**

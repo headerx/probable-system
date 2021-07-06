@@ -3,8 +3,8 @@
 namespace Turbine\Menus\Models;
 
 use Database\Factories\PageLinkFactory;
-use Support\Concerns\CachesQueries;
-use Support\Concerns\HasParent;
+use Turbine\Concerns\CachesQueries;
+use Turbine\Concerns\HasParent;
 use Turbine\Pages\Models\Page;
 
 class PageLink extends MenuItem

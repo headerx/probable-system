@@ -13,12 +13,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use Spatie\EloquentSortable\Sortable;
-use Support\Concerns\CachesQueries;
-use Support\Concerns\CascadeDeactivates;
-use Support\Concerns\CascadeRestores;
-use Support\Concerns\HasChildren;
-use Support\Concerns\HasIterativeQuickSort;
-use Support\Concerns\HasUuid;
+use Turbine\Concerns\CachesQueries;
+use Turbine\Concerns\CascadeDeactivates;
+use Turbine\Concerns\CascadeRestores;
+use Turbine\Concerns\HasChildren;
+use Turbine\Concerns\HasIterativeQuickSort;
+use Turbine\Concerns\HasUuid;
 use Turbine\Auth\Models\Role;
 use Turbine\Auth\Models\User;
 use Turbine\Icons\Casts\IconIdCast;
@@ -100,7 +100,7 @@ class MenuItem extends Model implements Sortable, HasPath
 
     public function getPath()
     {
-        return '/' . config('core.menus.route_prefix') . '/' . $this->slug;
+        return '/' . config('turbine.menus.route_prefix') . '/' . $this->slug;
     }
 
     /**

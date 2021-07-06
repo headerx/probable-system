@@ -3,7 +3,7 @@
 namespace Turbine\Pages\Http\Livewire;
 
 use Illuminate\Support\Str;
-use Support\Concerns\InteractsWithBanner;
+use Turbine\Concerns\InteractsWithBanner;
 use Turbine\Livewire\BaseEditForm;
 use Turbine\Pages\Actions\SaveAsPageAction;
 use Turbine\Pages\Actions\UpdatePageAction;

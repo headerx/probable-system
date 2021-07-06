@@ -3,7 +3,7 @@
 namespace Turbine\Menus\Models;
 
 use Database\Factories\DropdownLinkFactory;
-use Support\Concerns\HasParent;
+use Turbine\Concerns\HasParent;
 
 class DropdownLink extends MenuItem
 {

@@ -15,10 +15,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 use Illuminate\Support\Stringable;
 use Spatie\EloquentSortable\Sortable;
-use Support\Concerns\CachesQueries;
-use Support\Concerns\CascadeDeactivates;
-use Support\Concerns\HasIterativeQuickSort;
-use Support\Concerns\HasUuid;
+use Turbine\Concerns\CachesQueries;
+use Turbine\Concerns\CascadeDeactivates;
+use Turbine\Concerns\HasIterativeQuickSort;
+use Turbine\Concerns\HasUuid;
 use Turbine\Menus\Contracts\HasPath;
 use Turbine\Menus\Models\MenuItem;
 use Turbine\Pages\QueryBuilders\PageQueryBuilder;
@@ -61,7 +61,7 @@ class Page extends Model implements Sortable, HasPath
 
     public function getPath()
     {
-        return '/' . config('core.pages.route_prefix') . '/' . $this->slug;
+        return '/' . config('turbine.pages.route_prefix') . '/' . $this->slug;
     }
 
     public function template()

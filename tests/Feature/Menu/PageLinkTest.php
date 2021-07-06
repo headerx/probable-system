@@ -11,7 +11,7 @@ class PageLinkTest extends TestCase
 {
     public function test_it_links_to_a_page()
     {
-        $response = $this->get('/'.config('core.pages.route_prefix').'/test-page');
+        $response = $this->get('/'.config('turbine.pages.route_prefix').'/test-page');
 
         $response->assertNotFound();
 
@@ -25,7 +25,7 @@ class PageLinkTest extends TestCase
 
         $uri = MenuItem::find($pageLink->id)->uri;
 
-        $this->assertEquals('/'.config('core.pages.route_prefix').'/test-page', $uri);
+        $this->assertEquals('/'.config('turbine.pages.route_prefix').'/test-page', $uri);
 
         $response = $this->get(MenuItem::find($pageLink->id)->uri);
 

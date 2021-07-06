@@ -7,13 +7,6 @@ use Illuminate\Support\Facades\Schema;
 class CreateIconsTable extends Migration
 {
     /**
-     * The database schema.
-     *
-     * @var \Illuminate\Database\Schema\Builder
-     */
-    protected $schema;
-
-    /**
      * Create a new migration instance.
      *
      * @return void
@@ -35,7 +28,7 @@ class CreateIconsTable extends Migration
 
     public function up()
     {
-        $this->schema->create('icons', function (Blueprint $table) {
+        Schema::create('icons', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('icon_set_id');
             $table->string('name');

@@ -3,7 +3,7 @@
 namespace Turbine\Menus\Models;
 
 use Database\Factories\InternalIframeFactory;
-use Support\Concerns\HasParent;
+use Turbine\Concerns\HasParent;
 use Turbine\Icons\Casts\IconIdCast;
 use Turbine\Menus\Casts\InternalIframeUriCast;
 use Turbine\Menus\Casts\SnakeCast;

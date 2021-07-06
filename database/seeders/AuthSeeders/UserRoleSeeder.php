@@ -19,7 +19,7 @@ class UserRoleSeeder extends Seeder
 
     public function __construct()
     {
-        $this->connection = config('core.auth.connection');
+        $this->connection = config('turbine.auth.connection');
     }
 
     /**
@@ -38,7 +38,7 @@ class UserRoleSeeder extends Seeder
             // Do nothing
         }
 
-        $admin = Admin::first()->assignRole(config('core.admin.role'));
+        $admin = Admin::first()->assignRole(config('turbine.admin.role'));
 
         event(new UserUpdated($admin));
 

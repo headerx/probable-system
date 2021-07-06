@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\EloquentSortable\Sortable;
-use Support\Concerns\HasIterativeQuickSort;
-use Support\Concerns\HasUuid;
+use Turbine\Concerns\HasIterativeQuickSort;
+use Turbine\Concerns\HasUuid;
 use Wildside\Userstamps\Userstamps;
 
 class PageTemplate extends Model implements Sortable

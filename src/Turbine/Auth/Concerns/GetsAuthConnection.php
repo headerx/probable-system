@@ -11,7 +11,7 @@ trait GetsAuthConnection
      */
     public function getConnectionName(): string
     {
-        return config('core.auth.connection');
+        return config('turbine.auth.connection');
     }
 
     public function getFullTableName()

@@ -50,6 +50,6 @@ class Role extends SpatieRole
 
     public function isAdmin(): bool
     {
-        return $this->name === config('core.admin.role');
+        return $this->name === config('turbine.admin.role');
     }
 }

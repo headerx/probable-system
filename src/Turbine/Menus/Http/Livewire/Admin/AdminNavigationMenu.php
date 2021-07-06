@@ -27,7 +27,7 @@ class AdminNavigationMenu extends Component
 
     public function setHandleState($handle)
     {
-        $this->menuOpen[$handle] = session($handle, config('core.menus.admin_sidebar_default_open', true));
+        $this->menuOpen[$handle] = session($handle, config('turbine.menus.admin_sidebar_default_open', true));
     }
 
     /**

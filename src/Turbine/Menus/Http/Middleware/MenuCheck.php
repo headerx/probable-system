@@ -4,7 +4,7 @@ namespace Turbine\Menus\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Support\Concerns\InteractsWithBanner;
+use Turbine\Concerns\InteractsWithBanner;
 use Turbine\Menus\Models\MenuItem;
 
 class MenuCheck

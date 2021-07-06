@@ -33,7 +33,7 @@ class UserQueryBuilder extends Builder
     public function allAccess() :self
     {
         return $this->whereHas('roles', function ($query) {
-            $query->where('name', config('core.admin.role'));
+            $query->where('name', config('turbine.admin.role'));
         });
     }
 

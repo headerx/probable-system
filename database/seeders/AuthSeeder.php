@@ -25,7 +25,7 @@ class AuthSeeder extends Seeder
 
     public function __construct()
     {
-        $this->connection = config('core.auth.connection');
+        $this->connection = config('turbine.auth.connection');
     }
 
     /**

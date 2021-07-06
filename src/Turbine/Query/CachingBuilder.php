@@ -14,7 +14,7 @@ class CachingBuilder extends QueryBuilder
      */
     protected function runSelect()
     {
-        if (config('core.database.cache_queries')) {
+        if (config('turbine.database.cache_queries')) {
             return Cache::store('request')->remember($this->getCacheKey(), 1, function () {
                 return parent::runSelect();
             });
