@@ -2,6 +2,7 @@
 
 namespace Turbine\Menus\Http\Livewire\Admin;
 
+use Support\Concerns\InteractsWithBanner;
 use Turbine\Livewire\BaseEditForm;
 use Turbine\Livewire\Concerns\HandlesSelectIconEvent;
 use Turbine\Menus\Actions\SaveAsMenuItemAction;
@@ -9,7 +10,6 @@ use Turbine\Menus\Actions\UpdateMenuItemAction;
 use Turbine\Menus\Enums\MenuItemTypeEnum;
 use Turbine\Menus\Models\MenuItem;
 use Turbine\Pages\Models\Page;
-use Support\Concerns\InteractsWithBanner;
 
 class EditMenuItemForm extends BaseEditForm
 {

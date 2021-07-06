@@ -2,7 +2,6 @@
 
 namespace Turbine\Pages\Models;
 
-use Database\Factories\PageFactory;
 use Database\Factories\PageTemplateFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -48,5 +47,4 @@ class PageTemplate extends Model implements Sortable
     {
         return $this->editor ?? $this->creator;
     }
-
 }

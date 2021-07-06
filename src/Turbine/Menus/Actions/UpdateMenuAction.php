@@ -5,12 +5,12 @@ namespace Turbine\Menus\Actions;
 use Exception;
 use Illuminate\Support\Facades\DB;
 use Log;
-use Turbine\Menus\Enums\MenuTemplateEnum;
-use Turbine\Menus\Enums\MenuTypeEnum;
-use Turbine\Menus\Models\Menu;
 use Spatie\Enum\Laravel\Rules\EnumRule;
 use Support\Concerns\FiltersData;
 use Support\Exceptions\GeneralException;
+use Turbine\Menus\Enums\MenuTemplateEnum;
+use Turbine\Menus\Enums\MenuTypeEnum;
+use Turbine\Menus\Models\Menu;
 use Validator;
 
 class UpdateMenuAction

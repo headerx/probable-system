@@ -3,9 +3,9 @@
 namespace Turbine\Pages\Http\Livewire;
 
 use Illuminate\Database\Eloquent\Builder;
+use Rappasoft\LaravelLivewireTables\Views\Column;
 use Turbine\Livewire\BaseDataTable;
 use Turbine\Pages\Models\Page;
-use Rappasoft\LaravelLivewireTables\Views\Column;
 
 /**
  * Class RolesTable.

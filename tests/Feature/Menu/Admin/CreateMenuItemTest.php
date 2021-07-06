@@ -3,10 +3,10 @@
 namespace Tests\Feature\Menu\Admin;
 
 use Livewire;
+use Tests\TestCase;
 use Turbine\Icons\Models\Icon;
 use Turbine\Menus\Enums\MenuItemTypeEnum;
 use Turbine\Menus\Http\Livewire\Admin\CreateMenuItemForm;
-use Tests\TestCase;
 
 class CreateMenuItemTest extends TestCase
 {

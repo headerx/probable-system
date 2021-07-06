@@ -3,9 +3,9 @@
 namespace Tests\Feature\Menu\Admin;
 
 use Livewire;
+use Tests\TestCase;
 use Turbine\Menus\Http\Livewire\Admin\DeactivateMenuItemDialog;
 use Turbine\Menus\Models\MenuItem;
-use Tests\TestCase;
 
 class DeactivateMenuItemTest extends TestCase
 {

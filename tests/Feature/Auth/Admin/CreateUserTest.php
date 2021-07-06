@@ -4,13 +4,13 @@ namespace Tests\Feature\Auth\Admin;
 
 use Illuminate\Support\Facades\Event;
 use Livewire;
+use Tests\TestCase;
 use Turbine\Auth\Enums\UserTypeEnum;
 use Turbine\Auth\Events\User\UserCreated;
 use Turbine\Auth\Http\Livewire\CreateUserForm;
 use Turbine\Auth\Models\Role;
 use Turbine\Auth\Models\User;
 use Turbine\Menus\Models\MenuItem;
-use Tests\TestCase;
 
 class CreateUserTest extends TestCase
 {

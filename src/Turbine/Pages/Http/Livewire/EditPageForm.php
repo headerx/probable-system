@@ -2,17 +2,13 @@
 
 namespace Turbine\Pages\Http\Livewire;
 
-use Exception;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
-use Illuminate\Validation\Rule;
-use Log;
+use Support\Concerns\InteractsWithBanner;
 use Turbine\Livewire\BaseEditForm;
 use Turbine\Pages\Actions\SaveAsPageAction;
 use Turbine\Pages\Actions\UpdatePageAction;
 use Turbine\Pages\Models\Page;
 use Turbine\Pages\Models\PageTemplate;
-use Support\Concerns\InteractsWithBanner;
 
 class EditPageForm extends BaseEditForm
 {

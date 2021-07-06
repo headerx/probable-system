@@ -4,8 +4,8 @@ namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Laravel\Jetstream\Features;
-use Turbine\Auth\Models\User;
 use Tests\TestCase;
+use Turbine\Auth\Models\User;
 
 class PasswordConfirmationTest extends TestCase
 {

@@ -3,10 +3,10 @@
 namespace Tests\Feature\Auth;
 
 use Event;
+use Tests\TestCase;
 use Turbine\Auth\Actions\CreateRoleAction;
 use Turbine\Auth\Events\Role\RoleCreated;
 use Turbine\Auth\Models\Role;
-use Tests\TestCase;
 
 class CreateRoleActionTest extends TestCase
 {

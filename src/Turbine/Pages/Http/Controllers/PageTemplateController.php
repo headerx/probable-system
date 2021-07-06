@@ -8,7 +8,6 @@ use Turbine\Pages\Models\PageTemplate;
 
 class PageTemplateController extends Controller
 {
-
     /**
      * Handle the incoming request.
      *
@@ -30,5 +29,4 @@ class PageTemplateController extends Controller
     {
         return view('core.admin.pages.edit-template', ['template' => $template]);
     }
-
 }

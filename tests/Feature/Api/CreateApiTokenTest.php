@@ -6,9 +6,9 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Artisan;
 use Laravel\Jetstream\Features;
 use Livewire\Livewire;
-use Turbine\Auth\Models\User;
 use Support\Passport\ApiTokenManager;
 use Tests\TestCase;
+use Turbine\Auth\Models\User;
 
 class CreateApiTokenTest extends TestCase
 {

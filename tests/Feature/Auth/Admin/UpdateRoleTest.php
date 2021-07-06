@@ -4,12 +4,12 @@ namespace Tests\Feature\Auth\Admin;
 
 use Illuminate\Support\Facades\Event;
 use Livewire;
+use Tests\TestCase;
 use Turbine\Auth\Enums\UserTypeEnum;
 use Turbine\Auth\Events\Role\RoleUpdated;
 use Turbine\Auth\Http\Livewire\EditRoleForm;
 use Turbine\Auth\Models\Permission;
 use Turbine\Auth\Models\Role;
-use Tests\TestCase;
 
 class UpdateRoleTest extends TestCase
 {

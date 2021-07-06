@@ -2,9 +2,9 @@
 
 namespace Tests\Feature\Menu;
 
+use Tests\TestCase;
 use Turbine\Menus\Actions\DeactivateMenuAction;
 use Turbine\Menus\Models\Menu;
-use Tests\TestCase;
 
 class DeactivateMenuActionTest extends TestCase
 {

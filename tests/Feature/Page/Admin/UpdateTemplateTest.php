@@ -2,12 +2,10 @@
 
 namespace Tests\Feature\Page\Admin;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Livewire;
+use Tests\TestCase;
 use Turbine\Pages\Http\Livewire\EditPageTemplateForm;
 use Turbine\Pages\Models\PageTemplate;
-use Tests\TestCase;
 
 class UpdateTemplateTest extends TestCase
 {
