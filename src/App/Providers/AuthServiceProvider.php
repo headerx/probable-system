@@ -3,12 +3,14 @@
 namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Gate;
 use Laravel\Passport\Passport;
-use Turbine\Auth\Enums\UserTypeEnum;
+use Turbine\Auth\Actions\BootComposerProviderAction;
+use Turbine\Auth\Actions\BootGateProviderAction;
+use Turbine\Auth\Concerns\RegistersAuthLivewireComponents;
 
 class AuthServiceProvider extends ServiceProvider
 {
+    use RegistersAuthLivewireComponents;
     /**
      * The policy mappings for the application.
      *
@@ -23,19 +25,15 @@ class AuthServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
-    {
+    public function boot(
+        BootComposerProviderAction $bootComposerProviderAction,
+        BootGateProviderAction $bootGateProviderAction
+    ) {
         $this->registerPolicies();
 
-        // Implicitly grant "Admin" role all permissions
-        // This works in the app by using gate-related functions like auth()->user->can() and @can()
-        Gate::before(function ($user) {
-            return $user->hasAllAccess();
-        });
+        $authViewComposer = ($bootComposerProviderAction)();
 
-        Gate::define('is_admin', function ($user = null) {
-            return $user->type === UserTypeEnum::admin();
-        });
+        $authGates = ($bootGateProviderAction)();
 
         Passport::routes();
 
@@ -52,5 +50,10 @@ class AuthServiceProvider extends ServiceProvider
             // 'update',
             // 'delete',
         ]);
+    }
+
+    public function register()
+    {
+        $this->registerLivewire();
     }
 }
