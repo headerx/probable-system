@@ -10,20 +10,20 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "@fortawesome/fontawesome-free": "^5.15.3",
         "@tailwindcss/forms": "^0.3.1",
         "@tailwindcss/typography": "^0.4.0",
         "alpinejs": "^3.0.6",
         "axios": "^0.21",
-        "grapesjs": "^0.17.19",
-        "grapesjs-plugin-ckeditor": "^0.0.10",
-        "grapesjs-preset-webpage": "^0.1.11",
-        "grapesjs-tabs": "^1.0.6",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
         "postcss-import": "^14.0.1",
-        "puppeteer": "^10.1.0",
-        "tailwindcss": "^2.2.2"
+        "tailwindcss": "^2.2.2",
+        "@fortawesome/fontawesome-free": "^5.15.3",
+        "grapesjs": "^0.17.19",
+        "grapesjs-plugin-ckeditor": "^0.0.10",
+        "grapesjs-preset-webpage": "^0.1.11",
+        "grapesjs-tabs": "^1.0.6",
+        "puppeteer": "^10.1.0"
     }
 }

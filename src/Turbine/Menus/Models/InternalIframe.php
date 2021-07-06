@@ -3,7 +3,7 @@
 namespace Turbine\Menus\Models;
 
 use Database\Factories\InternalIframeFactory;
-use HeaderX\BukuIcons\Casts\IconIdCast;
+use HeaderX\BukuIcons\Concerns\HasIcon;
 use Turbine\Concerns\HasParent;
 use Turbine\Menus\Casts\InternalIframeUriCast;
 use Turbine\Menus\Casts\SnakeCast;
@@ -13,11 +13,11 @@ use Turbine\Menus\Enums\MenuItemTypeEnum;
 class InternalIframe extends MenuItem
 {
     use HasParent;
+    use HasIcon;
 
     protected $casts = [
         'type' => MenuItemTypeEnum::class,
         'template' => MenuItemTemplateEnum::class,
-        'icon_id' => IconIdCast::class,
         'active' => 'bool',
         'handle' => SnakeCast::class,
         'uri' => InternalIframeUriCast::class,
