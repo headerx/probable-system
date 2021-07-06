@@ -3,8 +3,8 @@
 namespace Turbine\Menus\Models;
 
 use Database\Factories\ExternalIframeFactory;
-use Turbine\Concerns\HasParent;
 use HeaderX\BukuIcons\Casts\IconIdCast;
+use Turbine\Concerns\HasParent;
 use Turbine\Menus\Casts\ExternalIframeUriCast;
 use Turbine\Menus\Casts\SnakeCast;
 use Turbine\Menus\Enums\MenuItemTemplateEnum;

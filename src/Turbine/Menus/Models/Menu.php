@@ -4,6 +4,7 @@ namespace Turbine\Menus\Models;
 
 use Database\Factories\MenuFactory;
 use Dyrynda\Database\Support\CascadeSoftDeletes;
+use HeaderX\BukuIcons\Concerns\HasIcon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -16,7 +17,6 @@ use Turbine\Concerns\CascadeDeactivates;
 use Turbine\Concerns\CascadeRestores;
 use Turbine\Concerns\HasIterativeQuickSort;
 use Turbine\Concerns\HasUuid;
-use HeaderX\BukuIcons\Concerns\HasIcon;
 use Turbine\Menus\Casts\SnakeCast;
 use Turbine\Menus\Enums\MenuItemTypeEnum;
 use Turbine\Menus\Enums\MenuTemplateEnum;
