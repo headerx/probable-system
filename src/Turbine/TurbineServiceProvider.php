@@ -2,6 +2,7 @@
 
 namespace Turbine;
 
+use Illuminate\Support\ServiceProvider;
 use Turbine\Console\Commands\TurbineActionMakeCommand;
 use Turbine\Console\Commands\TurbineCastMakeCommand;
 use Turbine\Console\Commands\TurbineConsoleMakeCommand;
