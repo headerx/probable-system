@@ -5,9 +5,9 @@ namespace Tests\Feature\Api;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Laravel\Jetstream\Features;
 use Livewire;
-use Turbine\Auth\Models\User;
 use Support\Passport\OAuthClientManager;
 use Tests\TestCase;
+use Turbine\Auth\Models\User;
 
 class CreateOauthClientTest extends TestCase
 {

@@ -8,8 +8,8 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\URL;
 use Laravel\Fortify\Features;
-use Turbine\Auth\Models\User;
 use Tests\TestCase;
+use Turbine\Auth\Models\User;
 
 class EmailVerificationTest extends TestCase
 {

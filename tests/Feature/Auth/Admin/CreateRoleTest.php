@@ -4,12 +4,12 @@ namespace Tests\Feature\Auth\Admin;
 
 use Event;
 use Livewire;
+use Tests\TestCase;
 use Turbine\Auth\Enums\UserTypeEnum;
 use Turbine\Auth\Events\Role\RoleCreated;
 use Turbine\Auth\Http\Livewire\CreateRoleForm;
 use Turbine\Auth\Models\Permission;
 use Turbine\Auth\Models\Role;
-use Tests\TestCase;
 
 class CreateRoleTest extends TestCase
 {

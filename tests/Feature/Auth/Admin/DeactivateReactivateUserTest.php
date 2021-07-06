@@ -4,11 +4,11 @@ namespace Tests\Feature\Auth\Admin;
 
 use Illuminate\Support\Facades\Event;
 use Livewire;
+use Tests\TestCase;
 use Turbine\Auth\Events\User\UserStatusChanged;
 use Turbine\Auth\Http\Livewire\DeactivateUserDialog;
 use Turbine\Auth\Http\Livewire\ReactivateUserDialog;
 use Turbine\Auth\Models\User;
-use Tests\TestCase;
 
 class DeactivateReactivateUserTest extends TestCase
 {

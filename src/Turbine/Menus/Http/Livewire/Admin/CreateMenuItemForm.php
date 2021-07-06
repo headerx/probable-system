@@ -2,6 +2,7 @@
 
 namespace Turbine\Menus\Http\Livewire\Admin;
 
+use Support\Concerns\InteractsWithBanner;
 use Turbine\Icons\Models\Icon;
 use Turbine\Livewire\BaseCreateForm;
 use Turbine\Livewire\Concerns\HandlesSelectIconEvent;
@@ -10,7 +11,6 @@ use Turbine\Menus\Enums\MenuItemTypeEnum;
 use Turbine\Menus\Models\Menu;
 use Turbine\Menus\Models\MenuItem;
 use Turbine\Pages\Models\Page;
-use Support\Concerns\InteractsWithBanner;
 
 class CreateMenuItemForm extends BaseCreateForm
 {

@@ -4,13 +4,13 @@ namespace Tests\Feature\Auth\Admin;
 
 use Illuminate\Support\Facades\Event;
 use Livewire;
+use Tests\TestCase;
 use Turbine\Auth\Enums\UserTypeEnum;
 use Turbine\Auth\Events\User\UserUpdated;
 use Turbine\Auth\Http\Livewire\EditUserForm;
 use Turbine\Auth\Models\Role;
 use Turbine\Auth\Models\User;
 use Turbine\Menus\Models\MenuItem;
-use Tests\TestCase;
 
 class UpdateUserTest extends TestCase
 {

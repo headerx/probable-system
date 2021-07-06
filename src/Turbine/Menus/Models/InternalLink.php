@@ -3,12 +3,12 @@
 namespace Turbine\Menus\Models;
 
 use Database\Factories\InternalLinkFactory;
+use Support\Concerns\HasParent;
 use Turbine\Icons\Casts\IconIdCast;
 use Turbine\Menus\Casts\InternalLinkUriCast;
 use Turbine\Menus\Casts\SnakeCast;
 use Turbine\Menus\Enums\MenuItemTemplateEnum;
 use Turbine\Menus\Enums\MenuItemTypeEnum;
-use Support\Concerns\HasParent;
 
 class InternalLink extends MenuItem
 {

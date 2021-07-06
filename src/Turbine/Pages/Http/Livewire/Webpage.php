@@ -11,7 +11,7 @@ class Webpage extends Component
 
     public function render()
     {
-        if (!$this->page->isActive()) {
+        if (! $this->page->isActive()) {
             abort(404);
         }
 

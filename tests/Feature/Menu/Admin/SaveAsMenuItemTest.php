@@ -3,11 +3,11 @@
 namespace Tests\Feature\Menu\Admin;
 
 use Livewire;
+use Tests\TestCase;
 use Turbine\Icons\Models\Icon;
 use Turbine\Menus\Enums\MenuItemTypeEnum;
 use Turbine\Menus\Http\Livewire\Admin\EditMenuItemForm;
 use Turbine\Menus\Models\MenuItem;
-use Tests\TestCase;
 
 class SaveAsMenuItemTest extends TestCase
 {

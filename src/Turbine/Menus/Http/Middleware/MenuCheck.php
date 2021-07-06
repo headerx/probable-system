@@ -4,8 +4,8 @@ namespace Turbine\Menus\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Turbine\Menus\Models\MenuItem;
 use Support\Concerns\InteractsWithBanner;
+use Turbine\Menus\Models\MenuItem;
 
 class MenuCheck
 {

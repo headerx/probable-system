@@ -6,8 +6,8 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Jetstream\Http\Livewire\UpdatePasswordForm;
 use Livewire\Livewire;
-use Turbine\Auth\Models\User;
 use Tests\TestCase;
+use Turbine\Auth\Models\User;
 
 class UpdatePasswordTest extends TestCase
 {

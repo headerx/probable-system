@@ -14,14 +14,14 @@ use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 use Illuminate\Support\Stringable;
-use Turbine\Menus\Contracts\HasPath;
-use Turbine\Menus\Models\MenuItem;
-use Turbine\Pages\QueryBuilders\PageQueryBuilder;
 use Spatie\EloquentSortable\Sortable;
 use Support\Concerns\CachesQueries;
 use Support\Concerns\CascadeDeactivates;
 use Support\Concerns\HasIterativeQuickSort;
 use Support\Concerns\HasUuid;
+use Turbine\Menus\Contracts\HasPath;
+use Turbine\Menus\Models\MenuItem;
+use Turbine\Pages\QueryBuilders\PageQueryBuilder;
 use Wildside\Userstamps\Userstamps;
 
 class Page extends Model implements Sortable, HasPath

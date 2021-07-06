@@ -4,10 +4,9 @@ namespace Turbine\Pages\Http\Livewire;
 
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
+use Support\Concerns\InteractsWithBanner;
 use Turbine\Livewire\BaseCreateForm;
 use Turbine\Pages\Models\PageTemplate;
-use SebastianBergmann\Template\Template;
-use Support\Concerns\InteractsWithBanner;
 
 class CreatePageTemplateForm extends BaseCreateForm
 {
@@ -38,7 +37,7 @@ class CreatePageTemplateForm extends BaseCreateForm
             'meta' => ['array', 'nullable'],
         ])->validateWithBag('createdPageForm');
 
-       $template = PageTemplate::create([
+        $template = PageTemplate::create([
             'name' => $this->state['name'],
             'html' => $this->state['html'],
             'css' => $this->state['css'] ?? null,
@@ -50,7 +49,6 @@ class CreatePageTemplateForm extends BaseCreateForm
         $this->flashBanner('Template Created.');
 
         return redirect()->route('admin.pages.templates.edit', [ 'template' => $template]);
-
     }
 
     /**

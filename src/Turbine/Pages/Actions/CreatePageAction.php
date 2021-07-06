@@ -5,13 +5,12 @@ namespace Turbine\Pages\Actions;
 use Exception;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rule;
-use Turbine\Pages\Models\Page;
 use Support\Concerns\FiltersData;
+use Turbine\Pages\Models\Page;
 use Validator;
 
 class CreatePageAction
 {
-
     use FiltersData;
 
     public function __invoke(array $data)
@@ -31,7 +30,6 @@ class CreatePageAction
         ])->validateWithBag('createdPageForm');
 
         try {
-
             Page::create([
                 'title' => $data['title'],
                 'slug' => $data['slug'],
@@ -42,7 +40,6 @@ class CreatePageAction
                 'active' => $data['active'],
             ]);
         } catch (Exception $e) {
-
             Log::error($e->getMessage());
         }
     }

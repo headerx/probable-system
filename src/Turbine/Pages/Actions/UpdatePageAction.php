@@ -5,8 +5,8 @@ namespace Turbine\Pages\Actions;
 use Exception;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rule;
-use Turbine\Pages\Models\Page;
 use Support\Concerns\FiltersData;
+use Turbine\Pages\Models\Page;
 use Validator;
 
 class UpdatePageAction

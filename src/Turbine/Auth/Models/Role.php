@@ -4,13 +4,13 @@ namespace Turbine\Auth\Models;
 
 use Database\Factories\RoleFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Turbine\Menus\Concerns\HasMenuItems;
 use Spatie\Permission\Models\Role as SpatieRole;
 use Turbine\Auth\Concerns\GetsAuthConnection;
 use Turbine\Auth\Concerns\HasPermissionsLabel;
 use Turbine\Auth\Enums\UserTypeEnum;
 use Turbine\Concerns\CachesQueries;
 use Turbine\Concerns\HasUuid;
+use Turbine\Menus\Concerns\HasMenuItems;
 use Wildside\Userstamps\Userstamps;
 
 /**

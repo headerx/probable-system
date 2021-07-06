@@ -2,9 +2,9 @@
 
 namespace Turbine\Livewire;
 
-use Turbine\Livewire\Concerns\InteractsWithDialog;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Support\Concerns\InteractsWithBanner;
+use Turbine\Livewire\Concerns\InteractsWithDialog;
 
 /**
  * Class resourcesTable.

@@ -2,8 +2,8 @@
 
 namespace Turbine\Livewire\Concerns;
 
-use Turbine\Icons\Models\Icon;
 use Support\FontAwesome;
+use Turbine\Icons\Models\Icon;
 
 trait HandlesSelectIconEvent
 {

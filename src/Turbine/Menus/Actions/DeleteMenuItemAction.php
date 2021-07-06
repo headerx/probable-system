@@ -4,8 +4,8 @@ namespace Turbine\Menus\Actions;
 
 use Exception;
 use Log;
-use Turbine\Menus\Models\MenuItem;
 use Support\Exceptions\GeneralException;
+use Turbine\Menus\Models\MenuItem;
 
 class DeleteMenuItemAction
 {

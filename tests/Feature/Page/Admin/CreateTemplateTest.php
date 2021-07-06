@@ -3,8 +3,8 @@
 namespace Tests\Feature\Page\Admin;
 
 use Livewire;
-use Turbine\Pages\Http\Livewire\CreatePageTemplateForm;
 use Tests\TestCase;
+use Turbine\Pages\Http\Livewire\CreatePageTemplateForm;
 
 class CreateTemplateTest extends TestCase
 {

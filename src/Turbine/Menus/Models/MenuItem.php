@@ -12,6 +12,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
+use Spatie\EloquentSortable\Sortable;
+use Support\Concerns\CachesQueries;
+use Support\Concerns\CascadeDeactivates;
+use Support\Concerns\CascadeRestores;
+use Support\Concerns\HasChildren;
+use Support\Concerns\HasIterativeQuickSort;
+use Support\Concerns\HasUuid;
 use Turbine\Auth\Models\Role;
 use Turbine\Auth\Models\User;
 use Turbine\Icons\Casts\IconIdCast;
@@ -22,13 +29,6 @@ use Turbine\Menus\Enums\MenuItemTemplateEnum;
 use Turbine\Menus\Enums\MenuItemTypeEnum;
 use Turbine\Menus\QueryBuilders\MenuItemQueryBuilder;
 use Turbine\Pages\Models\Page;
-use Spatie\EloquentSortable\Sortable;
-use Support\Concerns\CachesQueries;
-use Support\Concerns\CascadeDeactivates;
-use Support\Concerns\CascadeRestores;
-use Support\Concerns\HasChildren;
-use Support\Concerns\HasIterativeQuickSort;
-use Support\Concerns\HasUuid;
 
 class MenuItem extends Model implements Sortable, HasPath
 {

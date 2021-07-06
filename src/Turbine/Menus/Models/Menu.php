@@ -10,6 +10,12 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
+use Spatie\EloquentSortable\Sortable;
+use Support\Concerns\CachesQueries;
+use Support\Concerns\CascadeDeactivates;
+use Support\Concerns\CascadeRestores;
+use Support\Concerns\HasIterativeQuickSort;
+use Support\Concerns\HasUuid;
 use Turbine\Icons\Casts\IconIdCast;
 use Turbine\Icons\Concerns\HasIcon;
 use Turbine\Menus\Casts\SnakeCast;
@@ -17,12 +23,6 @@ use Turbine\Menus\Enums\MenuItemTypeEnum;
 use Turbine\Menus\Enums\MenuTemplateEnum;
 use Turbine\Menus\Enums\MenuTypeEnum;
 use Turbine\Menus\QueryBuilders\MenuQueryBuilder;
-use Spatie\EloquentSortable\Sortable;
-use Support\Concerns\CachesQueries;
-use Support\Concerns\CascadeDeactivates;
-use Support\Concerns\CascadeRestores;
-use Support\Concerns\HasIterativeQuickSort;
-use Support\Concerns\HasUuid;
 
 class Menu extends Model implements Sortable
 {

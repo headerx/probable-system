@@ -2,12 +2,9 @@
 
 namespace Turbine\Pages\Http\Livewire;
 
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
-use Illuminate\Validation\Rule;
 use Turbine\Livewire\BaseCreateForm;
 use Turbine\Pages\Actions\CreatePageAction;
-use Turbine\Pages\Models\Page;
 use Turbine\Pages\Models\PageTemplate;
 
 class CreatePageForm extends BaseCreateForm
@@ -46,8 +43,6 @@ class CreatePageForm extends BaseCreateForm
     {
         $this->state['slug'] = Str::slug($this->state['slug']);
     }
-
-
 
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View

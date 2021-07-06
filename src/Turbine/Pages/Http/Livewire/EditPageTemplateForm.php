@@ -6,10 +6,9 @@ use Exception;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use Log;
-use Turbine\Livewire\BaseEditForm;
-use Turbine\Pages\Models\Page;
-use Turbine\Pages\Models\PageTemplate;
 use Support\Concerns\InteractsWithBanner;
+use Turbine\Livewire\BaseEditForm;
+use Turbine\Pages\Models\PageTemplate;
 
 class EditPageTemplateForm extends BaseEditForm
 {

@@ -3,9 +3,9 @@
 namespace Turbine\Menus\Http\Livewire\Admin;
 
 use Illuminate\Database\Eloquent\Builder;
+use Rappasoft\LaravelLivewireTables\Views\Column;
 use Turbine\Livewire\BaseDataTable;
 use Turbine\Menus\Models\MenuItem;
-use Rappasoft\LaravelLivewireTables\Views\Column;
 
 class MenuItemsTable extends BaseDataTable
 {

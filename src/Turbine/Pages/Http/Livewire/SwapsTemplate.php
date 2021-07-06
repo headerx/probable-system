@@ -4,13 +4,13 @@ namespace Turbine\Pages\Http\Livewire;
 
 use Turbine\Pages\Models\PageTemplate;
 
-trait SwapsTemplate {
-
+trait SwapsTemplate
+{
     public function swapTemplate($id = null)
     {
         $template = PageTemplate::find($id);
 
-        if(!$template){
+        if (! $template) {
             return;
         }
 
