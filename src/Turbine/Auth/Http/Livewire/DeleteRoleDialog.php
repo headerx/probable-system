@@ -28,7 +28,7 @@ class DeleteRoleDialog extends BaseDeleteDialog
      */
     public function render()
     {
-        return view('core.admin.roles.delete', [
+        return view('admin.roles.delete', [
             'role' => $this->model,
         ]);
     }

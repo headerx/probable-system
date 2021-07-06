@@ -28,7 +28,7 @@ class DeactivateUserDialog extends BaseDeactivateDialog
      */
     public function render()
     {
-        return view('core.admin.users.deactivate', [
+        return view('admin.users.deactivate', [
             'user' => $this->model,
         ]);
     }

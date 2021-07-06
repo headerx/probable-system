@@ -121,6 +121,6 @@ class EditPageTemplateForm extends BaseEditForm
             'template' => $this->model,
         ], $this->data ?? []);
 
-        return view('core.admin.pages.edit-template-form', $this->data);
+        return view('admin.pages.edit-template-form', $this->data);
     }
 }

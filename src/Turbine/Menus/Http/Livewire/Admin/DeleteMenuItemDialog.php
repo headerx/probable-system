@@ -31,7 +31,7 @@ class DeleteMenuItemDialog extends BaseDeleteDialog
      */
     public function render()
     {
-        return view('core.admin.menus.delete-item', [
+        return view('admin.menus.delete-item', [
             'menuItem' => $this->model,
         ]);
     }

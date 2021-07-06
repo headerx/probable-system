@@ -25,7 +25,7 @@ class RestorePageDialog extends BaseRestoreDialog
      */
     public function render()
     {
-        return view('core.admin.pages.restore', [
+        return view('admin.pages.restore', [
             'page' => $this->model,
         ]);
     }

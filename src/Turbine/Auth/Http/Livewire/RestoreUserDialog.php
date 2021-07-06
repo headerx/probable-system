@@ -12,7 +12,7 @@ class RestoreUserDialog extends BaseRestoreDialog
 
     public function restoreUser(RestoreUserAction $restoreUserAction)
     {
-        $this->authorize('core.admin.access.users');
+        $this->authorize('admin.access.users');
 
         $restoreUserAction($this->model, true);
 
@@ -26,7 +26,7 @@ class RestoreUserDialog extends BaseRestoreDialog
      */
     public function render()
     {
-        return view('core.admin.users.restore', [
+        return view('admin.users.restore', [
             'user' => $this->model,
         ]);
     }

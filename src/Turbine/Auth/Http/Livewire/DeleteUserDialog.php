@@ -15,7 +15,7 @@ class DeleteUserDialog extends BaseDeleteDialog
 
     public function deleteUser(DeletesUsers $deleteUser)
     {
-        $this->authorize('core.admin.access.users');
+        $this->authorize('admin.access.users');
 
         if ($this->model->id === auth()->id()) {
             abort(403, 'You cannot delete yourself here. Please delete your account from your user profile.');
@@ -33,7 +33,7 @@ class DeleteUserDialog extends BaseDeleteDialog
      */
     public function render()
     {
-        return view('core.admin.users.delete', [
+        return view('admin.users.delete', [
             'user' => $this->model,
         ]);
     }

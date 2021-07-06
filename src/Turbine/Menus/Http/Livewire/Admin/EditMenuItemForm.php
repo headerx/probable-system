@@ -136,6 +136,6 @@ class EditMenuItemForm extends BaseEditForm
             'menuItem' => $this->model,
         ], $this->data ?? []);
 
-        return view('core.admin.menus.edit-item', $this->data);
+        return view('admin.menus.edit-item', $this->data);
     }
 }

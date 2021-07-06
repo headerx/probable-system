@@ -52,7 +52,7 @@ class CreateMenuItemForm extends BaseCreateForm
     public function createDialog($params = [])
     {
         if (! is_impersonating()) {
-            $this->authorize('core.admin.access.menus');
+            $this->authorize('admin.access.menus');
         }
         $this->emit('selectIcon', Icon::first()->art);
 
@@ -98,6 +98,6 @@ class CreateMenuItemForm extends BaseCreateForm
 
     public function render()
     {
-        return view('core.admin.menus.create-item', $this->data ?? []);
+        return view('admin.menus.create-item', $this->data ?? []);
     }
 }

@@ -41,7 +41,7 @@ class EditRoleForm extends BaseEditForm
         if ($this->model->type->equals(UserTypeEnum::admin())) {
             $this->authorize('onlysuperadmincandothis');
         } else {
-            $this->authorize('core.admin.access.users');
+            $this->authorize('admin.access.users');
         }
 
         $this->resetErrorBag();
@@ -61,7 +61,7 @@ class EditRoleForm extends BaseEditForm
 
     public function render()
     {
-        return view('core.admin.roles.edit', [
+        return view('admin.roles.edit', [
             'role' => $this->model,
         ]);
     }

@@ -17,6 +17,6 @@ class CreateMenuItemButton extends BaseCreateButton
      */
     public function render()
     {
-        return view('core.admin.menus.create-menu-item-button');
+        return view('admin.menus.create-menu-item-button');
     }
 }

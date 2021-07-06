@@ -102,6 +102,6 @@ class EditPageForm extends BaseEditForm
             'templates' => PageTemplate::all(),
         ], $this->data ?? []);
 
-        return view('core.admin.pages.edit-form', $data);
+        return view('admin.pages.edit-form', $data);
     }
 }

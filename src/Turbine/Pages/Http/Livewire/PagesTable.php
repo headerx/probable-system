@@ -43,6 +43,6 @@ class PagesTable extends BaseDataTable
 
     public function rowView(): string
     {
-        return 'core.admin.pages.row';
+        return 'admin.pages.row';
     }
 }

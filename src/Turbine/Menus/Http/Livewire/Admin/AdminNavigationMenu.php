@@ -53,6 +53,6 @@ class AdminNavigationMenu extends Component
             }
         }
 
-        return view('core.admin.navigation-menu');
+        return view('admin.navigation-menu');
     }
 }

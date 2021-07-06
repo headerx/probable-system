@@ -29,7 +29,7 @@ class RestoreMenuItemDialog extends BaseRestoreDialog
      */
     public function render()
     {
-        return view('core.admin.menus.restore-item', [
+        return view('admin.menus.restore-item', [
             'menuItem' => $this->model,
         ]);
     }

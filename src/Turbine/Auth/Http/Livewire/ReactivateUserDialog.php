@@ -28,7 +28,7 @@ class ReactivateUserDialog extends BaseReactivateDialog
      */
     public function render()
     {
-        return view('core.admin.users.reactivate', [
+        return view('admin.users.reactivate', [
             'user' => $this->model,
         ]);
     }

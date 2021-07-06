@@ -25,7 +25,7 @@ class ReactivatePageDialog extends BaseReactivateDialog
      */
     public function render()
     {
-        return view('core.admin.pages.reactivate', [
+        return view('admin.pages.reactivate', [
             'page' => $this->model,
         ]);
     }

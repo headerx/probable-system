@@ -29,7 +29,7 @@ class EditUserPasswordForm extends Component
 
     public function editPasswordDialog($userId): void
     {
-        $this->authorize('core.admin.access.users.change-password');
+        $this->authorize('admin.access.users.change-password');
         $this->editingUserPassword = true;
         $this->modelId = $userId;
         $this->dispatchBrowserEvent('showing-edit-user-password-modal');
@@ -37,7 +37,7 @@ class EditUserPasswordForm extends Component
 
     public function updateUserPassword(ResetsUserPasswords $resetsUserPasswords): void
     {
-        $this->authorize('core.admin.access.users.change-password');
+        $this->authorize('admin.access.users.change-password');
 
         $this->resetErrorBag();
         $validator = Validator::make($this->state, [
@@ -55,7 +55,7 @@ class EditUserPasswordForm extends Component
      */
     public function render()
     {
-        return view('core.admin.users.change-password', [
+        return view('admin.users.change-password', [
             'user' => $this->model,
         ]);
     }

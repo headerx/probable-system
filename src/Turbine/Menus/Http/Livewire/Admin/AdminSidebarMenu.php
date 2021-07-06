@@ -56,6 +56,6 @@ class AdminSidebarMenu extends Component
      */
     public function render()
     {
-        return view('core.admin.sidebar-menu');
+        return view('admin.sidebar-menu');
     }
 }

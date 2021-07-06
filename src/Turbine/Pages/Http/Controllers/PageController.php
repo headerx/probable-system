@@ -16,7 +16,7 @@ class PageController extends Controller
      */
     public function create(Request $request)
     {
-        return view('core.admin.pages.create');
+        return view('admin.pages.create');
     }
 
     /**
@@ -27,7 +27,7 @@ class PageController extends Controller
      */
     public function edit(Page $page)
     {
-        return view('core.admin.pages.edit', ['page' => $page]);
+        return view('admin.pages.edit', ['page' => $page]);
     }
 
     /**

@@ -35,6 +35,6 @@ class PageTemplatesTable extends BaseDataTable
 
     public function rowView(): string
     {
-        return 'core.admin.pages.template-row';
+        return 'admin.pages.template-row';
     }
 }

@@ -116,7 +116,7 @@ class UsersTable extends BaseDataTable
      */
     public function rowView(): string
     {
-        return 'core.admin.users.row';
+        return 'admin.users.row';
     }
 
     /**
@@ -124,7 +124,7 @@ class UsersTable extends BaseDataTable
      */
     public function render()
     {
-        return view('core.admin.users.livewire-tables.'. config('livewire-tables.theme').'.datatable')
+        return view('admin.users.livewire-tables.'. config('livewire-tables.theme').'.datatable')
             ->with([
                 'columns' => $this->columns(),
                 'rowView' => $this->rowView(),

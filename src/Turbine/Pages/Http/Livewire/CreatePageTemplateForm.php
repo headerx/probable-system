@@ -56,6 +56,6 @@ class CreatePageTemplateForm extends BaseCreateForm
      */
     public function render()
     {
-        return view('core.admin.pages.create-template-form');
+        return view('admin.pages.create-template-form');
     }
 }

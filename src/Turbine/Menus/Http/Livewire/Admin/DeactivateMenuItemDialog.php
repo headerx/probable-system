@@ -12,7 +12,7 @@ class DeactivateMenuItemDialog extends BaseDeactivateDialog
 
     public function deactivateMenuItem(DeactivateMenuItemAction $deactivateMenuItemAction)
     {
-        $this->authorize('core.admin.access.menus');
+        $this->authorize('admin.access.menus');
 
         $deactivateMenuItemAction($this->model);
 
@@ -27,7 +27,7 @@ class DeactivateMenuItemDialog extends BaseDeactivateDialog
      */
     public function render()
     {
-        return view('core.admin.menus.deactivate-item', [
+        return view('admin.menus.deactivate-item', [
             'menu' => $this->model,
         ]);
     }

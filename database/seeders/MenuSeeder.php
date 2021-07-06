@@ -194,7 +194,7 @@ class MenuSeeder extends Seeder
             new InternalLink([
                 'template' => MenuItemTemplateEnum::default(),
                 'target' => MenuItemTargetEnum::self(),
-                'route' => 'core.admin.icons',
+                'route' => 'admin.icons',
                 'name' => 'Icons',
                 'handle' => 'icon_manager',
                 'uri' => '/admin/icons',

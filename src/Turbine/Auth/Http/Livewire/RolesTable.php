@@ -40,6 +40,6 @@ class RolesTable extends BaseDataTable
 
     public function rowView(): string
     {
-        return 'core.admin.roles.row';
+        return 'admin.roles.row';
     }
 }

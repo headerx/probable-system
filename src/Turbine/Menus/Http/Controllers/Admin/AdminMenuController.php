@@ -17,7 +17,7 @@ class AdminMenuController
     {
         $menus = Menu::with('children')->get();
 
-        return view('core.admin.menus.index', [
+        return view('admin.menus.index', [
             'menus' => $menus,
         ]);
     }

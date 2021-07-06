@@ -48,7 +48,7 @@ class EditUserForm extends BaseEditForm
 
     public function updateUser(UpdateUserAction $updateUserAction): void
     {
-        $this->authorize('core.admin.access.users');
+        $this->authorize('admin.access.users');
 
         $this->resetErrorBag();
 
@@ -70,7 +70,7 @@ class EditUserForm extends BaseEditForm
      */
     public function render()
     {
-        return view('core.admin.users.edit', [
+        return view('admin.users.edit', [
             'user' => $this->model,
         ]);
     }

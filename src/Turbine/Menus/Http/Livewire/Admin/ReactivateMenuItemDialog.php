@@ -12,7 +12,7 @@ class ReactivateMenuItemDialog extends BaseReactivateDialog
 
     public function reactivateMenuItem(ReactivateMenuItemAction $reactivateMenuItemAction)
     {
-        $this->authorize('core.admin.access.menus');
+        $this->authorize('admin.access.menus');
 
         $reactivateMenuItemAction($this->model);
 
@@ -28,7 +28,7 @@ class ReactivateMenuItemDialog extends BaseReactivateDialog
      */
     public function render()
     {
-        return view('core.admin.menus.reactivate-item', [
+        return view('admin.menus.reactivate-item', [
             'menuItem' => $this->model,
         ]);
     }

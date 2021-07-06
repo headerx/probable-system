@@ -23,7 +23,7 @@ class ClearUserSessionDialog extends Component
 
     public function confirmClearSessions($userId): void
     {
-        $this->authorize('core.admin.access.users.clear-session');
+        $this->authorize('admin.access.users.clear-session');
         $this->confirmingClearSessions = true;
         $this->modelId = $userId;
         $this->dispatchBrowserEvent('showing-clear-sessions-modal');
@@ -31,7 +31,7 @@ class ClearUserSessionDialog extends Component
 
     public function clearSessions(ClearUserSessionsAction $clearUserSessionsAction): void
     {
-        $this->authorize('core.admin.access.users.clear-session');
+        $this->authorize('admin.access.users.clear-session');
 
         $clearUserSessionsAction($this->model);
 
@@ -44,7 +44,7 @@ class ClearUserSessionDialog extends Component
      */
     public function render()
     {
-        return view('core.admin.users.clear-sessions', [
+        return view('admin.users.clear-sessions', [
             'user' => $this->model,
         ]);
     }

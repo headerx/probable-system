@@ -16,7 +16,7 @@ class PageTemplateController extends Controller
      */
     public function create(Request $request)
     {
-        return view('core.admin.pages.create-template');
+        return view('admin.pages.create-template');
     }
 
     /**
@@ -27,6 +27,6 @@ class PageTemplateController extends Controller
      */
     public function edit(PageTemplate $template)
     {
-        return view('core.admin.pages.edit-template', ['template' => $template]);
+        return view('admin.pages.edit-template', ['template' => $template]);
     }
 }

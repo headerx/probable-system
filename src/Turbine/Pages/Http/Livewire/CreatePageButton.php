@@ -11,6 +11,6 @@ class CreatePageButton extends BaseCreateButton
      */
     public function render()
     {
-        return view('core.admin.pages.create-page-button');
+        return view('admin.pages.create-page-button');
     }
 }

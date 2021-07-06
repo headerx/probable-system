@@ -28,7 +28,7 @@ class CreateUserForm extends BaseCreateForm
 
     public function createUser(CreatesNewUsers $createsNewUsers): void
     {
-        $this->authorize('core.admin.access.users');
+        $this->authorize('admin.access.users');
 
         $this->resetErrorBag();
 
@@ -44,6 +44,6 @@ class CreateUserForm extends BaseCreateForm
      */
     public function render()
     {
-        return view('core.admin.users.create');
+        return view('admin.users.create');
     }
 }

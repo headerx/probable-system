@@ -24,7 +24,7 @@ class DeletePageDialog extends BaseDeleteDialog
      */
     public function render()
     {
-        return view('core.admin.pages.delete', [
+        return view('admin.pages.delete', [
             'page' => $this->model,
         ]);
     }

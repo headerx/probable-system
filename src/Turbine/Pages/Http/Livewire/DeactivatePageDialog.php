@@ -25,7 +25,7 @@ class DeactivatePageDialog extends BaseDeactivateDialog
      */
     public function render()
     {
-        return view('core.admin.pages.deactivate', [
+        return view('admin.pages.deactivate', [
             'page' => $this->model,
         ]);
     }

@@ -35,6 +35,6 @@ class CreateRoleForm extends BaseCreateForm
      */
     public function render()
     {
-        return view('core.admin.roles.create');
+        return view('admin.roles.create');
     }
 }
