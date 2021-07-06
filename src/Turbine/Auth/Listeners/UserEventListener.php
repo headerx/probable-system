@@ -104,47 +104,47 @@ class UserEventListener
     {
         $events->listen(
             UserLoggedIn::class,
-            'Auth\Listeners\UserEventListener@onLoggedIn'
+            'Turbine\Auth\Listeners\UserEventListener@onLoggedIn'
         );
 
         $events->listen(
             Login::class,
-            'Auth\Listeners\UserEventListener@onLoggedIn'
+            'Turbine\Auth\Listeners\UserEventListener@onLoggedIn'
         );
 
         $events->listen(
             PasswordReset::class,
-            'Auth\Listeners\UserEventListener@onPasswordReset'
+            'Turbine\Auth\Listeners\UserEventListener@onPasswordReset'
         );
 
         $events->listen(
             UserCreated::class,
-            'Auth\Listeners\UserEventListener@onCreated'
+            'Turbine\Auth\Listeners\UserEventListener@onCreated'
         );
 
         $events->listen(
             UserUpdated::class,
-            'Auth\Listeners\UserEventListener@onUpdated'
+            'Turbine\Auth\Listeners\UserEventListener@onUpdated'
         );
 
         $events->listen(
             UserDeleted::class,
-            'Auth\Listeners\UserEventListener@onDeleted'
+            'Turbine\Auth\Listeners\UserEventListener@onDeleted'
         );
 
         $events->listen(
             UserRestored::class,
-            'Auth\Listeners\UserEventListener@onRestored'
+            'Turbine\Auth\Listeners\UserEventListener@onRestored'
         );
 
         $events->listen(
             UserDestroyed::class,
-            'Auth\Listeners\UserEventListener@onDestroyed'
+            'Turbine\Auth\Listeners\UserEventListener@onDestroyed'
         );
 
         $events->listen(
             UserStatusChanged::class,
-            'Auth\Listeners\UserEventListener@onStatusChanged'
+            'Turbine\Auth\Listeners\UserEventListener@onStatusChanged'
         );
     }
 }

@@ -72,17 +72,17 @@ class RoleEventListener
     {
         $events->listen(
             RoleCreated::class,
-            'Auth\Listeners\RoleEventListener@onCreated'
+            'Turbine\Auth\Listeners\RoleEventListener@onCreated'
         );
 
         $events->listen(
             RoleUpdated::class,
-            'Auth\Listeners\RoleEventListener@onUpdated'
+            'Turbine\Auth\Listeners\RoleEventListener@onUpdated'
         );
 
         $events->listen(
             RoleDeleted::class,
-            'Auth\Listeners\RoleEventListener@onDeleted'
+            'Turbine\Auth\Listeners\RoleEventListener@onDeleted'
         );
     }
 }

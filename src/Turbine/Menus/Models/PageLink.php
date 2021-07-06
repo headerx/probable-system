@@ -3,6 +3,7 @@
 namespace Turbine\Menus\Models;
 
 use Database\Factories\PageLinkFactory;
+use HeaderX\BukuIcons\Concerns\HasIcon;
 use Turbine\Concerns\CachesQueries;
 use Turbine\Concerns\HasParent;
 use Turbine\Pages\Models\Page;
@@ -11,6 +12,7 @@ class PageLink extends MenuItem
 {
     use CachesQueries;
     use HasParent;
+    use HasIcon;
 
     protected $with = ['page'];
 
