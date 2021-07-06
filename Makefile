@@ -62,6 +62,7 @@ install:
 	$(PHP) artisan vendor:publish --provider="HeaderX\AdminerPlugin\AdminerPluginServiceProvider" --tag="adminer-plugins-config"; \
 	$(PHP) artisan vendor:publish --tag=impersonate; \
 	$(PHP) artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"; \
+	$(PHP) artisan vendor:publish --provider="HeaderX\JetstreamPassport\JetstreamPassportServiceProvider" --tag="jetstream-passport-views"; \
 	$(PHP) artisan jetstream:install livewire; \
 	$(PHP) artisan jetstream-passport:install
 
