@@ -2,8 +2,8 @@
 
 namespace Turbine\Menus\Http\Livewire\Admin;
 
+use HeaderX\BukuIcons\Models\Icon;
 use Turbine\Concerns\InteractsWithBanner;
-use Turbine\Icons\Models\Icon;
 use Turbine\Livewire\BaseCreateForm;
 use Turbine\Livewire\Concerns\HandlesSelectIconEvent;
 use Turbine\Menus\Actions\CreateMenuItemAction;
@@ -54,7 +54,7 @@ class CreateMenuItemForm extends BaseCreateForm
         if (! is_impersonating()) {
             $this->authorize('admin.access.menus');
         }
-        $this->emit('selectIcon', Icon::first()->art);
+        $this->emit('selectIcon', 'carbon-no-image-32');
 
         if (isset($params['attach_for_user']) && $params['attach_for_user']) {
             $this->state['attach_for_user'] = true;

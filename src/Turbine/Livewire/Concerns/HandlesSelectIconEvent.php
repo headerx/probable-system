@@ -2,7 +2,7 @@
 
 namespace Turbine\Livewire\Concerns;
 
-use HeaderX\BukuIcons\Models\Icon;
+use HeaderX\BukuIcons\Actions\FindIconByNameOrIdAction;
 
 trait HandlesSelectIconEvent
 {
@@ -14,6 +14,6 @@ trait HandlesSelectIconEvent
 
     public function reloadIconPreview(): void
     {
-        $this->iconPreview = (Icon::find($this->state['icon_id']))->name ?? 'carbon-no-image-32';
+        $this->iconPreview = ((new FindIconByNameOrIdAction)($this->state['icon_id']))->name ?? 'carbon-no-image-32';
     }
 }
