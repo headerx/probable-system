@@ -47,6 +47,6 @@ class DashboardMenu extends Component
     {
         $this->menuItems = collect(Auth::user()->getAllMenuItems());
 
-        return view('core.menu.dashboard.default.index');
+        return view('menu.dashboard.default.index');
     }
 }

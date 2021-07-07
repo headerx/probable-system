@@ -1,4 +1,4 @@
-<div x-data="{ open: '{{ $menuOpen[$menu->handle] ?? config('core.menus.admin_sidebar_default_open', true ) }}' }">
+<div x-data="{ open: '{{ $menuOpen[$menu->handle] ?? config('menus.admin_sidebar_default_open', true ) }}' }">
     <button @click="open = !open" wire:click="toggleMenuState('{{ $menu->handle }}')"
         class="flex items-center justify-between w-full px-2 py-3 text-gray-600 cursor-pointer hover:bg-gray-100 hover:text-gray-700 focus:outline-none">
         <span class="flex items-center">

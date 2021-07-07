@@ -75,7 +75,7 @@ class EditMenuItemForm extends BaseEditForm
         $this->state['icon_id'] = $this->model->icon->input;
         $this->model->load('icon', 'page');
 
-        $this->iconPreview = $this->model->icon->art;
+        $this->iconPreview = $this->model->icon->name ?? 'carbon-no-image-32';
 
         if ($this->model->parent_id) {
             $this->item = true;

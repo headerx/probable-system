@@ -2,9 +2,9 @@
 
 namespace Tests\Feature\Menu\Admin;
 
+use HeaderX\BukuIcons\Models\Icon;
 use Livewire;
 use Tests\TestCase;
-use Turbine\Icons\Models\Icon;
 use Turbine\Menus\Enums\MenuItemTypeEnum;
 use Turbine\Menus\Http\Livewire\Admin\CreateMenuItemForm;
 
@@ -38,7 +38,6 @@ class CreateMenuItemTest extends TestCase
                 'target' => '_self',
                 'active' => '1',
                 'title' => 'test',
-                'icon_id' => Icon::find(1)->html,
             ]])
             ->call('createMenuItem');
 
@@ -53,7 +52,6 @@ class CreateMenuItemTest extends TestCase
                 'target' => '_self',
                 'active' => '1',
                 'title' => 'test',
-                'icon_id' => 1,
             ]
         );
     }

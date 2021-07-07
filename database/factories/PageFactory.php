@@ -26,7 +26,7 @@ class PageFactory extends Factory
             'title' => $this->faker->unique()->sentence(3),
             'html' => $this->faker->randomHtml(),
             'css' => $this->faker->randomElement(['*{ color : red; }', '*{ color : blue; }', '*{ color : green; }']),
-            'layout' => $this->faker->randomElement(['layouts.guest', 'layouts.welcome']),
+            'layout' => $this->faker->randomElement(['layouts.guest']),
             'active' => 1,
         ];
     }

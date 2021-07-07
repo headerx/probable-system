@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb30e4c35a8058c81b40523df5002d46",
+    "content-hash": "4deaf81a90b94a5db5a41562bce8dff2",
     "packages": [
         {
             "name": "actb/blade-github-octicons",
@@ -5388,16 +5388,16 @@
         },
         {
             "name": "headerx/buku-icons",
-            "version": "v0.16",
+            "version": "v0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/headerx/buku-icons.git",
-                "reference": "e81880e38fafdfe5dec7ff1ba97a1422ed1c20bf"
+                "reference": "7203c0be5fbdf3bf8f3656b6ce4aceb3ece4dc80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/headerx/buku-icons/zipball/e81880e38fafdfe5dec7ff1ba97a1422ed1c20bf",
-                "reference": "e81880e38fafdfe5dec7ff1ba97a1422ed1c20bf",
+                "url": "https://api.github.com/repos/headerx/buku-icons/zipball/7203c0be5fbdf3bf8f3656b6ce4aceb3ece4dc80",
+                "reference": "7203c0be5fbdf3bf8f3656b6ce4aceb3ece4dc80",
                 "shasum": ""
             },
             "require": {
@@ -5512,7 +5512,7 @@
             ],
             "support": {
                 "issues": "https://github.com/headerx/buku-icons/issues",
-                "source": "https://github.com/headerx/buku-icons/tree/v0.16"
+                "source": "https://github.com/headerx/buku-icons/tree/v0.18"
             },
             "funding": [
                 {
@@ -5520,7 +5520,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-07-07T02:05:53+00:00"
+            "time": "2021-07-07T16:15:03+00:00"
         },
         {
             "name": "headerx/laravel-adminer-plugins",

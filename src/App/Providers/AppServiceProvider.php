@@ -3,11 +3,15 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Turbine\Menus\Contracts\RegistersMenusLivewire;
 use Turbine\Menus\Concerns\RegistersMenusLivewireComponents;
+use Turbine\Pages\Concerns\RegistersPagesLivewireComponents;
+use Turbine\Pages\Contracts\RegistersPagesLivewire;
 
-class AppServiceProvider extends ServiceProvider
+class AppServiceProvider extends ServiceProvider implements RegistersMenusLivewire, RegistersPagesLivewire
 {
     use RegistersMenusLivewireComponents;
+    use RegistersPagesLivewireComponents;
     /**
      * Register any application services.
      *
@@ -15,7 +19,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerLivewire();
+        $this->registerMenusLivewire();
+        $this->registerPagesLivewire();
     }
 
     /**

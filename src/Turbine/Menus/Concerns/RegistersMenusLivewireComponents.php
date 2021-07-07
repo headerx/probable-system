@@ -17,7 +17,7 @@ use Turbine\Menus\Http\Livewire\MainMenu;
 
 trait RegistersMenusLivewireComponents
 {
-    public function registerLivewire()
+    public function registerMenusLivewire() : void
     {
         Livewire::component('turbine.menus.admin.menu-items-table', MenuItemsTable::class);
         Livewire::component('turbine.menus.admin.create-menu-item-form', CreateMenuItemForm::class);

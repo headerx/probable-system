@@ -56,6 +56,7 @@ class CreatePageTest extends TestCase
                 ]
         );
 
+        $this->withoutExceptionHandling();
         $response = $this->get('/pages/'. Page::where('slug', 'test-page')->first()->slug);
 
         $response->assertOk();

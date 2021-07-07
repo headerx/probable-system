@@ -9,10 +9,10 @@
 
     @include('admin.pages.table')
 
-    {{-- <livewire:core::admin.pages.create /> --}}
-    {{-- <livewire:core::admin.pages.edit /> --}}
-    <livewire:core::admin.pages.delete />
-    <livewire:core::admin.pages.deactivate />
+    {{-- <livewire:turbine.pages.create-page-form /> --}}
+    {{-- <livewire:turbine.pages.edit-page-form /> --}}
+    <livewire:turbine.pages.delete-page-dialog />
+    <livewire:turbine.pages.deactivate-page-dialog />
 </x-7xl>
 
 

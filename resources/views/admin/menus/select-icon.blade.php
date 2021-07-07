@@ -1,10 +1,11 @@
+{{-- {{ dd($icons) }} --}}
 <div class="w-full">
     <div class="relative flex items-center w-full mb-6">
         <div class="flex flex-col items-center w-full border border-gray-200 rounded-lg shadow-md md:flex-row">
             <div class="relative flex-shrink block inline-block w-full h-full pr-2 border-b md:w-auto md:border-b-0 md:border-r">
                 <select
                     wire:model="set"
-                    class="block w-full h-full p-4 mr-4 text-xl bg-transparent appearance-none focus:outline-none"
+                    class="block w-full h-full p-2 mr-2 text-xl bg-transparent appearance-none focus:outline-none"
                 >
                     <option value="">All icons</option>
 
@@ -14,14 +15,11 @@
                         </option>
                     @endforeach
                 </select>
-                <div class="absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 pointer-events-none">
-                    <x-heroicon-s-chevron-down class="w-4 h-4 fill-current" />
-                </div>
             </div>
 
             <div class="relative w-full">
                 <input
-                    class="block w-full p-4 text-xl border-0 rounded-lg"
+                    class="block w-full p-2 border-0 rounded-lg text-md"
                     autocapitalize="off"
                     autocomplete="off"
                     autocorrect="off"
@@ -32,7 +30,7 @@
                 >
                 <div class="absolute inset-y-0 right-0 flex items-center justify-center mr-5">
                     <div wire:loading>
-                        <x-heroicon-o-refresh class="inline w-6 h-6 fill-current text-scarlet-600 animate-spin"/>
+                        <x-heroicon-o-refresh class="inline w-6 h-6 text-indigo-500 fill-current animate-spin"/>
                     </div>
 
                     <div wire:loading.remove>
@@ -55,14 +53,27 @@
                 <span class="text-gray-500">Found:</span> {{ trans_choice('app.icons-result', count($icons)) }}
             </x-buku-icons::p>
         @endif
+        <x-form-help-text value="Please select an Icon from below" />
 
-        <div class="grid grid-cols-2 gap-3 mt-5 text-sm gap-y-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-10">
+        <div class="grid grid-cols-2 gap-1 mt-2 text-sm gap-y-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-10">
             @foreach ($icons as $icon)
                 <div
-                    class="flex flex-col items-center"
+                    wire:click="$emit('selectIcon', '{{ $icon->id }}')"
                     wire:key="result_{{ $icon->id }}"
+                    class="flex flex-col items-center"
                 >
-                    <x-buku-icons::icon-link :icon="$icon" />
+                <a
+                    {{-- href="{{ route('blade-icon', $icon) }}" --}}
+                    class="flex flex-col items-center justify-between w-full h-full p-3 text-gray-500 transition duration-300 ease-in-out border border-gray-200 rounded-md hover:text-indigo-500 hover:shadow-md"
+                    title="{{ $icon->name }}"
+                >
+                    {{ svg($icon->name, 'w-8 h-8') }}
+            
+                <span class="max-w-full mt-3 text-center truncate">
+                    {{ $icon->name }}
+                </span>
+            </a>
+            
                 </div>
             @endforeach
         </div>

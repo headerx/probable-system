@@ -6,7 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Artisan;
 use Laravel\Jetstream\Features;
 use Livewire\Livewire;
-use Support\Passport\ApiTokenManager;
+use HeaderX\JetstreamPassport\Http\Livewire\ApiTokenManager;
 use Tests\TestCase;
 use Turbine\Auth\Models\User;
 

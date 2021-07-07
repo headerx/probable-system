@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Turbine\Menus\Http\Controllers\MenuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,4 +30,24 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
  */
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'admin'], function () {
     includeRouteFiles(__DIR__ . '/admin/');
+});
+
+/*
+ *  Menu Routes
+ */
+Route::group([
+    'prefix' => config('turbine.menus.route_prefix'),
+    'as' => 'menus.',
+], function () {
+    includeRouteFiles(__DIR__ . '/menus/');
+});
+
+/*
+ *  Page Routes
+ */
+Route::group([
+    'prefix' => config('turbine.pages.route_prefix'),
+    'as' => 'pages.',
+], function () {
+    includeRouteFiles(__DIR__ . '/pages/');
 });

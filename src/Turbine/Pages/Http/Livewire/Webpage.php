@@ -19,7 +19,7 @@ class Webpage extends Component
             redirect($this->page->slug);
         }
 
-        return view('livewire.webpage')
-            ->layout($this->page->layout ?? 'core.layouts.guest');
+        return view('pages.webpage')
+            ->layout($this->page->layout ?? 'layouts.guest');
     }
 }

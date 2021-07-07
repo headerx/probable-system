@@ -8,8 +8,9 @@ use Turbine\Auth\Actions\BootComponentProviderAction;
 use Turbine\Auth\Actions\BootComposerProviderAction;
 use Turbine\Auth\Actions\BootGateProviderAction;
 use Turbine\Auth\Concerns\RegistersAuthLivewireComponents;
+use Turbine\Auth\Contracts\RegistersAuthLivewire;
 
-class AuthServiceProvider extends ServiceProvider
+class AuthServiceProvider extends ServiceProvider implements RegistersAuthLivewire
 {
     use RegistersAuthLivewireComponents;
     /**
@@ -58,6 +59,6 @@ class AuthServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->registerLivewire();
+        $this->registerAuthLivewire();
     }
 }

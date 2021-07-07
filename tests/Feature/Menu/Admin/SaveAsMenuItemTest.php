@@ -21,10 +21,6 @@ class SaveAsMenuItemTest extends TestCase
         $parent = MenuItem::factory()->active()->create(['parent_id' => null]);
         $child = MenuItem::factory()->active()->create(['parent_id' => $parent->id]);
 
-        if (! $parent->children()->exists()) {
-            dd($parent->id, $child);
-        }
-
         $initialCount = MenuItem::count();
 
         $this->assertDatabaseMissing('menu_items', [
@@ -36,7 +32,6 @@ class SaveAsMenuItemTest extends TestCase
             'target' => '_self',
             'active' => '1',
             'title' => 'test',
-            'icon_id' => 1,
         ]);
 
         Livewire::test(EditMenuItemForm::class)
@@ -50,7 +45,6 @@ class SaveAsMenuItemTest extends TestCase
                 'target' => '_self',
                 'active' => '1',
                 'title' => 'test',
-                'icon_id' => Icon::find(1)->html,
             ]])
             ->call('saveMenuItemAs');
 
@@ -63,7 +57,6 @@ class SaveAsMenuItemTest extends TestCase
 
         $this->assertfalse(
             MenuItem::where('name', 'test')
-                ->where('icon_id', 1)
                 ->first()
                 ->id == $parent->id
         );

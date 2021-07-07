@@ -4,7 +4,6 @@ namespace Tests\Feature\Menu\Admin;
 
 use Livewire;
 use Tests\TestCase;
-use Turbine\Icons\Models\Icon;
 use Turbine\Menus\Enums\MenuItemTypeEnum;
 use Turbine\Menus\Http\Livewire\Admin\EditMenuItemForm;
 use Turbine\Menus\Models\MenuItem;
@@ -36,7 +35,6 @@ class UpdateMenuTest extends TestCase
                 'target' => '_self',
                 'active' => '1',
                 'title' => 'test',
-                'icon_id' => Icon::find(1)->svg,
             ]])
             ->call('updateMenu');
 

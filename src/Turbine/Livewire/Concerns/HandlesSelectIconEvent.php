@@ -2,8 +2,7 @@
 
 namespace Turbine\Livewire\Concerns;
 
-use Support\FontAwesome;
-use Turbine\Icons\Models\Icon;
+use HeaderX\BukuIcons\Models\Icon;
 
 trait HandlesSelectIconEvent
 {
@@ -15,13 +14,6 @@ trait HandlesSelectIconEvent
 
     public function reloadIconPreview(): void
     {
-        $this->iconPreview = (! FontAwesome::wantsFontAwesome($this->state['icon_id'])) ? (new Icon([
-            'html' => $this->state['icon_id'],
-            'source' => 'raw',
-        ]))->art : (new Icon([
-            'class' => $this->state['icon_id'],
-            'source' => 'FontAwesome',
-            'version' => '5',
-        ]))->art;
+        $this->iconPreview = (Icon::find($this->state['icon_id']))->name ?? 'carbon-no-image-32';
     }
 }

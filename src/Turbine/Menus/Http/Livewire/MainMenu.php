@@ -50,6 +50,6 @@ class MainMenu extends Component
     {
         $this->parent = $this->model;
 
-        return view('core.menu.main.'. $this->model->template.'.index');
+        return view('menu.main.'. $this->model->template.'.index');
     }
 }

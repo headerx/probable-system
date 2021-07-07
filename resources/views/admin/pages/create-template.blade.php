@@ -11,7 +11,7 @@
 
     </x-slot>
 
-    <livewire:core::admin.page-templates.create />
+    <livewire:turbine.pages.create-page-template-form />
 </x-core::app-layout>
 
 

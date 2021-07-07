@@ -11,7 +11,7 @@
 
     </x-slot>
 
-    <livewire:core::admin.pages.edit :resourceId="$page->id" />
+    <livewire:turbine.pages.edit-page-form :resourceId="$page->id" />
 </x-core::app-layout>
 
 

@@ -21,7 +21,7 @@ use Turbine\Auth\Http\Livewire\UsersTable;
 
 trait RegistersAuthLivewireComponents
 {
-    public function registerLivewire()
+    public function registerAuthLivewire() : void
     {
         Livewire::component('turbine.auth.roles-table', RolesTable::class);
         Livewire::component('turbine.auth.create-role-form', CreateRoleForm::class);

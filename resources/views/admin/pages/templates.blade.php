@@ -7,11 +7,11 @@
         @include('admin.pages.header-actions')
     </x-slot>
 
-    <livewire:core::admin.page-templates-table />
+    <livewire:turbine.pages.page-templates-table />
 
-    {{-- <livewire:core::admin.pages.create /> --}}
-    {{-- <livewire:core::admin.pages.edit /> --}}
-    <livewire:core::admin.page-templates.delete />
+    {{-- <livewire:turbine.pages.create-page-form /> --}}
+    {{-- <livewire:turbine.pages.edit-page-form /> --}}
+    <livewire:turbine.pages.delete-page-template-dialog />
 </x-7xl>
 
 

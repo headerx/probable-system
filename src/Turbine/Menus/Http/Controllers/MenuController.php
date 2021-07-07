@@ -11,7 +11,7 @@ class MenuController
      */
     public function show(MenuItem $menuItem)
     {
-        return view('core.menus.show', [
+        return view('menus.show', [
             'parent' => $menuItem,
         ]);
     }
