@@ -2,9 +2,9 @@
 
 namespace Turbine\Menus\Console\Commands;
 
-use Turbine\Console\Commands\CoreModelMakeCommand;
+use Turbine\Console\Commands\TurbineModelMakeCommand;
 
-class MenuModelMakeCommand extends CoreModelMakeCommand
+class MenuModelMakeCommand extends TurbineModelMakeCommand
 {
     /**
      * The name and signature of the console command.

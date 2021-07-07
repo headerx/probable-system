@@ -31,5 +31,5 @@
     <x-jet-input-error for="icon_id" class="mt-2" />
     <x-form-help-text value="You may select from below, or enter raw html, or class name for font awesome" />
 
-    <livewire:core::admin.icons.icon-select />
+    <livewire:turbine.menus.admin.icon-select />
 </div>

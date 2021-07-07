@@ -5,7 +5,7 @@
         <button x-on:click="$clipboard(input)" class="flex items-center p-0.5 font-semibold text-gray-800  border border-gray-400 rounded shadow bg-gray-100"><i class="fa fa-link"></i></button>
     </div>
 @elseif($menu->isActive() && !$menu->trashed())
-    <livewire:core::admin.menus.create-menu-item-button value="" :params="['item' => true, 'parent_id' => $menu->id ]" wire:key="table-row-{{ $menu->uuid }}-column-6-button" />
+    <livewire:turbine.menus.admin.create-menu-item-button value="" :params="['item' => true, 'parent_id' => $menu->id ]" wire:key="table-row-{{ $menu->uuid }}-column-6-button" />
 @endif
 @if($menu->children()->exists())
 <div wire:ignore.self>

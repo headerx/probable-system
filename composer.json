@@ -36,7 +36,7 @@
         "friendsofphp/php-cs-fixer": "^3.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.3",
-        "headerx/buku-icons": "^0.14.0",
+        "headerx/buku-icons": "^0.16.0",
         "headerx/laravel-adminer-plugins": "^0.15.0",
         "headerx/laravel-helpers": "^0.10.0",
         "headerx/laravel-iframes": "^0.14.0",

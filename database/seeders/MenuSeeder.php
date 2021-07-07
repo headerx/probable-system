@@ -103,6 +103,7 @@ class MenuSeeder extends Seeder
             'handle' => 'guest_links',
             'active' => true,
             'title' => 'Guest Links',
+            'icon_id' => 'no image'
         ]);
 
         $guestLinks = $guest->pageLinks()->saveMany([

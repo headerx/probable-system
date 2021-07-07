@@ -60,7 +60,7 @@ class HttpKernel extends Kernel
             \Turbine\Auth\Http\Middleware\AdminCheck::class,
             \Turbine\Auth\Http\Middleware\SuperAdminCheck::class,
             \Illuminate\Routing\Middleware\ThrottleRequests::class,
-            \Illuminate\Auth\Middleware\RequirePassword::class,
+            // \Illuminate\Auth\Middleware\RequirePassword::class,
         ],
     ];
 

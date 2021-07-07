@@ -10,4 +10,4 @@
     @include('admin.menus.table', ['status' => 'deleted'])
 </x-7xl>
 
-<livewire:core::admin.menus.restore-menu-item />
+<livewire:turbine.menus.admin.restore-menu-item-dialog />

@@ -60,7 +60,7 @@ class CreateMenuItemsTable extends Migration
             $table->unsignedBigInteger('menu_id')->nullable();
             $table->unsignedBigInteger('page_id')->nullable();
             $table->unsignedBigInteger('parent_id')->nullable();
-            $table->unsignedBigInteger('icon_id')->nullable()->default(1);
+            $table->unsignedBigInteger('icon_id')->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->unsignedBigInteger('created_by')->nullable();
