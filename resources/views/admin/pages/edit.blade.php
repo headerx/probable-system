@@ -1,4 +1,4 @@
-<x-core::app-layout>
+<x-app-layout>
     <x-slot name="header">
 
         <h2 class="text-xl font-semibold leading-tight text-gray-800">
@@ -12,7 +12,7 @@
     </x-slot>
 
     <livewire:turbine.pages.edit-page-form :resourceId="$page->id" />
-</x-core::app-layout>
+</x-app-layout>
 
 
 

@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Turbine\Pages\Models\PageTemplate;
 
-class PageTemplateController extends Controller
+class PageTemplateController
 {
     /**
      * Handle the incoming request.

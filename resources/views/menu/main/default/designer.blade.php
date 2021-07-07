@@ -9,7 +9,7 @@
                 class="border border-dashed">
 
                 <div class="w-24 h-24 ml-auto mr-auto picture-box">
-                    {!! $item->icon->art !!}
+                    {{ svg($item->icon->name ?? 'carbon-no-image-32', 'w-full h-full') }}
                 </div>
 
                 <x-slot name="caption">

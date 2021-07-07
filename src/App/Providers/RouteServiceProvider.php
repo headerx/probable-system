@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
+use Schema;
+use Turbine\Pages\Http\Controllers\PageController;
+use Turbine\Pages\Models\Page;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -53,6 +56,12 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(function (Router $router) {
                     $router->impersonate();
                 });
+
+            if (Schema::hasTable('pages')) {
+                foreach (Page::onlyActive()->get() as $page) {
+                    Route::get($page->slug, [PageController::class, 'show']);
+                }
+            }
         });
     }
 

@@ -143,11 +143,11 @@ class MenuItem extends Model implements Sortable, HasPath
 
     public function getUriWithArtAttribute()
     {
-        if (isset($this->icon->art)) {
-            return "<div class=\"flex\"> {$this->icon->art} <u><a href=\"{$this->uri}\">{$this->uri}</a></u></div>";
-        }
 
-        return $this->link;
+        $name = $this->icon->name ?? 'carbon-no-image-32';
+
+        return "<div class=\"flex\">" . svg($name, 'w-4 h-4')->toHtml() . "<u><a href=\"{$this->uri}\">{$this->uri}</a></u></div>";
+
     }
 
     public function getNameWithArtAttribute(): string

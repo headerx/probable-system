@@ -1,15 +1,33 @@
-<x-app-layout>
+<x-7xl>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-jet-welcome />
+        <div class="inline-flex items-center w-full">
+            <div>
+                @if($logged_in_user->isAdmin())
+                {{__('Welcome, Admin.')}}
+                @else
+                {{__('Welcome, :user!', ['user' => $logged_in_user->name])}}
+                @endif
             </div>
+                @if($logged_in_user->isAdmin() || is_impersonating())
+                <div x-cloak x-show="designerView === 'true'" class="ml-auto">
+
+                    <livewire:turbine.menus.admin.create-menu-item-button
+                        value="New Menu"
+                        :params="[ 'item' => false, 'attach_for_user' => true ]"
+                    />
+
+                    <livewire:turbine.menus.admin.create-menu-item-button
+                        value="New Item"
+                        :params="[ 'item' => true, 'attach_for_user' => true ]"
+                    />
+                </div>
+            @endif
+
         </div>
-    </div>
-</x-app-layout>
+
+    </x-slot>
+        <livewire:turbine.menus.dashboard-menu :designerView="request()->has('designerView')" />
+        <livewire:turbine.menus.admin.create-menu-item-form />
+        <livewire:turbine.menus.admin.edit-menu-item-form />
+        <livewire:turbine.menus.admin.delete-menu-item-dialog />
+</x-7xl>

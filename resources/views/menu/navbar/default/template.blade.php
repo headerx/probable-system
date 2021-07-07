@@ -8,7 +8,7 @@
         </x-slot>
 
         @forelse($menu->authChildren as $item)
-            @if($loop->index === config('menus.max_hotlinks'))
+            @if($loop->index === config('turbine.menus.max_hotlinks'))
                 @php break; @endphp
             @endif
             @if($item->authChildren()->exists())
@@ -45,8 +45,8 @@
             @else
                 <x-navbar-menu-item>
                     <x-navbar-item-link href="{{ $item->uri }}" :target="$menu->target" :active="requestPathIs($item->uri)">
-                        <li class="list-none nav-box">
-                            {!! $item->icon->art !!}
+                        <li class="list-none">
+                            {{ svg($item->icon->name ?? 'carbon-no-image-32', 'w-4 h-4') }}
                         </li>
                     </x-navbar-item-link>
                 </x-navbar-menu-item>

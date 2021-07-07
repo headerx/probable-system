@@ -3,6 +3,7 @@
 namespace Turbine\Pages\Http\Livewire;
 
 use Illuminate\Support\Str;
+use Turbine\Concerns\FlashesBanner;
 use Turbine\Livewire\BaseCreateForm;
 use Turbine\Pages\Actions\CreatePageAction;
 use Turbine\Pages\Models\PageTemplate;
@@ -10,6 +11,7 @@ use Turbine\Pages\Models\PageTemplate;
 class CreatePageForm extends BaseCreateForm
 {
     use SwapsTemplate;
+    use FlashesBanner;
 
     /**
      * The create form state.
@@ -27,15 +29,20 @@ class CreatePageForm extends BaseCreateForm
         'meta' => [],
     ];
 
-    public function createPage(CreatePageAction $createPageAction): void
+    public function createPage(CreatePageAction $createPageAction)
     {
         $this->authorize('is_admin');
 
         $this->resetErrorBag();
 
-        $createPageAction($this->state);
+        $page = $createPageAction($this->state);
 
         $this->emit('refreshWithSuccess', 'Web Page Created!');
+
+        $this->flashBanner('Page Created');
+
+        return redirect()->route('admin.pages.edit', ['page' => $page]);
+
         $this->creatingResource = false;
     }
 

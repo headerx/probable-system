@@ -30,8 +30,8 @@ class CreatePageAction
         ])->validateWithBag('createdPageForm');
 
         try {
-            Page::create([
-                'title' => $data['title'],
+            $page = Page::create([
+                'title' => $data['title'] ?? $data['slug'],
                 'slug' => $data['slug'],
                 'html' => $data['html'],
                 'css' => $data['css'] ?? null,
@@ -42,5 +42,7 @@ class CreatePageAction
         } catch (Exception $e) {
             Log::error($e->getMessage());
         }
+
+        return $page;
     }
 }

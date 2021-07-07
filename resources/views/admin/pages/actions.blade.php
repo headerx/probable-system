@@ -7,7 +7,7 @@
     @elseif (! $page->isActive())
         <x-refresh-button wire:click="confirm('reactivate', {{ $page->id }})"/>
     @else
-        <a href="/iframes/pages/{{ $page->slug }}">
+        <a href="/iframes/{{ $page->slug }}">
             <x-show-button />
         </a>
         <a href="{{ route('admin.pages.edit', ['page' => $page]) }}">

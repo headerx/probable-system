@@ -10,6 +10,9 @@
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
+        <!-- icons -->
+        <link href="{{ asset('vendor/icons/fontawesome-free/css/all.css') }}" rel="stylesheet">
+
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
@@ -17,30 +20,56 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
+        <div x-data="{ open:false, sidebarOpen: '{{ session('sidebarOpen', config('turbine.menus.admin_sidebar_default_open', true )) }}', designerView: '{{ request()->has('designerView') ? 'true' : 'false' }}' }" class="flex min-h-screen overflow-x-hidden bg-gray-100">
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
+            @if($logged_in_user->isAdmin())
+                @livewire('turbine.menus.admin.admin-sidebar-menu')
             @endif
-
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+    
+            <div class="flex-1">
+    
+                @if($logged_in_user->isAdmin())
+                    @livewire('turbine.menus.admin.admin-navigation-menu')
+                @else
+                    @livewire('navigation-menu')
+                @endif
+    
+                <!-- Page Heading -->
+                @if (isset($header))
+                    <header class="bg-white shadow">
+    
+                        <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                            {{ $header }}
+                        </div>
+    
+                    </header>
+                @endif
+    
+                @include('admin.logged-in-as')
+    
+    
+    
+                <!-- Page Content -->
+                <main>
+    
+                    {{ $slot }}
+    
+                </main>
+            </div>
+            @if($logged_in_user->isAdmin() || is_impersonating())
+                @include('admin.designer-view-toggler')
+            @endif
         </div>
-
+    
         @stack('modals')
-
-        @livewireScripts
-    </body>
+    
+            @livewireScripts
+            <script src="https://cdn.jsdelivr.net/gh/livewire/sortable@v0.x.x/dist/livewire-sortable.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-clipboard@1.x.x/dist/alpine-clipboard.js"></script>
+        </body>
 </html>

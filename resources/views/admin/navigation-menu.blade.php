@@ -9,7 +9,7 @@
 
                     @if($logged_in_user->isAdmin())
                     <!--- sidebar toggler -->
-                    <livewire:core::admin.sidebar-toggler />
+                    <livewire:turbine.menus.admin.admin-sidebar-toggler />
                     @endif
                     <!-- Logo -->
                     <div class="flex items-center flex-shrink-0">

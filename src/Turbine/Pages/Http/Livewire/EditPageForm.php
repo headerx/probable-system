@@ -74,6 +74,7 @@ class EditPageForm extends BaseEditForm
         $updatePageAction($this->model, $this->state);
 
         $this->emit('refreshWithSuccess', 'Page Updated!');
+        $this->banner('Page Updated');
         $this->editingResource = false;
     }
 
@@ -86,7 +87,7 @@ class EditPageForm extends BaseEditForm
         $saveAsPageAction($this->model, $this->state);
 
         $this->emit('refreshWithSuccess', 'Page Saved!');
-        $this->banner('Template Updated');
+        $this->banner('Page Updated');
         $this->editingResource = false;
     }
 

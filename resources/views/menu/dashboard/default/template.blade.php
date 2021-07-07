@@ -9,7 +9,7 @@
                         :target="$item->target" >
 
                     <div class="w-24 h-24 ml-auto mr-auto picture-box">
-                      @isset($item->icon->art )  {!! $item->icon->art !!} @endisset
+                        {{ svg($item->icon->name ?? 'carbon-no-image-32', 'w-full h-full') }}
                     </div>
 
                     <x-slot name="caption">

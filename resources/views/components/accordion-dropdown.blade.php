@@ -6,7 +6,7 @@
                 {{ $header }}
             @else
             <!-- Menu Icon -->
-            @isset($menu->icon->art){!! $menu->icon->art !!}@endisset
+            {{ svg($menu->icon->name ?? 'carbon-no-image-32', 'w-8 h-8') }}
                 <span class="mx-2 font-medium">{{ $menu->name ?? '' }}</span>
             @endisset
         </span>
@@ -40,7 +40,7 @@
                                 requestPathIs($menuItem->children()->pluck('uri')->toArray())
                             )"
                         >
-                        <span class="mr-1">@isset($menuItem->icon->art){!! $menuItem->icon->art !!}@endisset</span>{{$menuItem->name}}
+                        <span class="mr-1">{{ svg($menuItem->icon->name ?? 'carbon-no-image-32', 'w-4 h-4') }}</span>{{$menuItem->name}}
                     </x-sidebar-link>
                 @endif
             @endforeach
