@@ -8,7 +8,7 @@
         <div class="pb-4">
             @include('admin.icons.name')
         </div>
-        @include('admin.icons.icon-editor')
+        @include('admin.menus.icon-editor')
     </x-slot>
 
     <x-slot name="footer">

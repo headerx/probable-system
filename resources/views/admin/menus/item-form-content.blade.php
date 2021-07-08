@@ -30,5 +30,5 @@
 
     </div>
 
-    @include('admin.icons.icon-editor')
+    @include('admin.menus.icon-editor')
 </div>
