@@ -4,6 +4,8 @@ namespace Tests\Feature\Menu;
 
 use Tests\TestCase;
 use Turbine\Menus\Enums\MenuItemTypeEnum;
+use Turbine\Menus\Enums\MenuTemplateEnum;
+use Turbine\Menus\Models\Menu;
 use Turbine\Menus\Models\MenuItem;
 
 class MenuLinkTest extends TestCase
@@ -21,6 +23,7 @@ class MenuLinkTest extends TestCase
         $parent = MenuItem::factory()->create([
             'type' => MenuItemTypeEnum::menu_item(),
             'name' => 'test-page',
+            'menu_id' => Menu::factory()->create(['template' => MenuTemplateEnum::default()])->id,
         ]);
 
         $menuLink = MenuItem::factory()->create([
