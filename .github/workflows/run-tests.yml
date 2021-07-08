@@ -46,5 +46,11 @@ jobs:
       - name: Cache Icons
         run: php artisan icon:cache
 
+      - name: Generate Application Key
+        run: php artisan key:generate
+        
+      - name: Generate Passport Keys
+        run: php artisan passport:keys
+
       - name: Execute tests
         run: vendor/bin/phpunit
