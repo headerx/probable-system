@@ -56,10 +56,13 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(function (Router $router) {
                     $router->impersonate();
                 });
+            
+            if (app()->environment(['production'])) {
 
-            if (Schema::hasTable('pages')) {
-                foreach (Page::onlyActive()->get() as $page) {
-                    Route::get($page->slug, [PageController::class, 'show']);
+                if (Schema::hasTable('pages')) {
+                    foreach (Page::onlyActive()->get() as $page) {
+                        Route::get($page->slug, [PageController::class, 'show']);
+                    }
                 }
             }
         });
