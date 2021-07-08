@@ -14,7 +14,7 @@
 
     @include('admin.menus.select-item-type')
 
-    <div x-cloak x-show="menuType !='{{ \Turbine\Menus\Enums\MenuItemTypeEnum::menu_link() }}' && menuType !='Turbine\egalith\Menus\Enums\MenuItemTypeEnum::page_link() }}'">
+    <div x-cloak x-show="menuType !='{{ \Turbine\Menus\Enums\MenuItemTypeEnum::menu_link() }}' && menuType !='{{ \Turbine\Menus\Enums\MenuItemTypeEnum::page_link() }}'">
         @include('admin.menus.link')
     </div>
 
