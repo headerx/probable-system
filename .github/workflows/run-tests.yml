@@ -42,13 +42,13 @@ jobs:
         run: |
           composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
           composer update --${{ matrix.stability }} --prefer-dist --no-interaction
+      
+      - name: Generate Application Key
+        run: php artisan key:generate
 
       - name: Cache Icons
         run: php artisan icon:cache
 
-      - name: Generate Application Key
-        run: php artisan key:generate
-        
       - name: Generate Passport Keys
         run: php artisan passport:keys
 
