@@ -19,9 +19,7 @@ class WelcomeController
             config('turbine.pages.redirect_slash_to_welcome') &&
             Page::onlyActive()->where('slug', 'welcome')->count()
         ) {
-            return redirect()->route('pages.show', [
-                'page' => Page::onlyActive()->where('slug', 'welcome')->ordered()->first(),
-            ]);
+            return redirect('/welcome');
         }
 
         return view('welcome');
