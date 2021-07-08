@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 use Log;
 use Spatie\Enum\Laravel\Rules\EnumRule;
-use Support\Exceptions\GeneralException;
+use Turbine\Exceptions\GeneralException;
 use Turbine\Concerns\FiltersData;
 use Turbine\Menus\Enums\MenuTemplateEnum;
 use Turbine\Menus\Enums\MenuTypeEnum;

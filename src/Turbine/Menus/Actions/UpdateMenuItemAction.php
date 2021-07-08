@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 use Log;
 use Spatie\Enum\Laravel\Rules\EnumRule;
-use Support\Exceptions\GeneralException;
+use Turbine\Exceptions\GeneralException;
 use Turbine\Concerns\FiltersData;
 use Turbine\Menus\Enums\MenuItemTargetEnum;
 use Turbine\Menus\Enums\MenuItemTemplateEnum;

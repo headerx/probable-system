@@ -8,7 +8,7 @@ use Illuminate\Validation\Rule;
 use Log;
 use Spatie\Enum\Laravel\Rules\EnumRule;
 use Str;
-use Support\Exceptions\GeneralException;
+use Turbine\Exceptions\GeneralException;
 use Turbine\Menus\Enums\MenuItemTargetEnum;
 use Turbine\Menus\Enums\MenuItemTemplateEnum;
 use Turbine\Menus\Enums\MenuItemTypeEnum;
