@@ -1,13 +1,13 @@
-@foreach($menus as $menu)
-    @if(($loop->index + $loop->parent->index) === config('menus.max_nav_menus'))
+@foreach($menuItems as $menuItem)
+    @if(($loop->index + $loop->parent->index) === config('turbine.menus.max_nav_menus'))
         @php break; @endphp
     @endif
-    <x-navbar-menu-group :active="requestPathIs($menu->uri) || requestPathIs($menu->authChildren->pluck('uri')->toArray())">
+    <x-navbar-menu-group :active="requestPathIs($menuItem->uri) || requestPathIs($menuItem->authChildren->pluck('uri')->toArray())">
         <x-slot name="header">
-            <a href="{{ $menu->uri }}" target="{{ $menu->target }}" >{{ $menu->name }}</a>
+            <a href="{{ $menuItem->uri }}" target="{{ $menuItem->target }}" >{{ $menuItem->name }}</a>
         </x-slot>
 
-        @forelse($menu->authChildren as $item)
+        @forelse($menuItem->authChildren as $item)
             @if($loop->index === config('turbine.menus.max_hotlinks'))
                 @php break; @endphp
             @endif
@@ -44,7 +44,7 @@
 
             @else
                 <x-navbar-menu-item>
-                    <x-navbar-item-link href="{{ $item->uri }}" :target="$menu->target" :active="requestPathIs($item->uri)">
+                    <x-navbar-item-link href="{{ $item->uri }}" :target="$menuItem->target" :active="requestPathIs($item->uri)">
                         <li class="list-none">
                             {{ svg($item->icon->name ?? 'carbon-no-image-32', 'w-4 h-4') }}
                         </li>

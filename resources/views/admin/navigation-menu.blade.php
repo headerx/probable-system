@@ -22,7 +22,7 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-2 sm:-my-px sm:ml-10 sm:flex">
                     @foreach($menus as $menu)
-                        @include('menu.navbar.'.$menu->template.'.index', ['menus' => $menu->authChildren])
+                        @include('menu.navbar.'.$menu->template.'.index', ['menuItems' => $menu->authChildren])
                     @endforeach
                 </div>
             </div>
