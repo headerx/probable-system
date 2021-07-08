@@ -3,6 +3,11 @@
 namespace Turbine;
 
 use Illuminate\Support\ServiceProvider;
+use Turbine\Console\Commands\DomainActionMakeCommand;
+use Turbine\Console\Commands\DomainCastMakeCommand;
+use Turbine\Console\Commands\DomainConsoleMakeCommand;
+use Turbine\Console\Commands\DomainControllerMakeCommand;
+use Turbine\Console\Commands\DomainModelMakeCommand;
 use Turbine\Console\Commands\TurbineActionMakeCommand;
 use Turbine\Console\Commands\TurbineCastMakeCommand;
 use Turbine\Console\Commands\TurbineConsoleMakeCommand;
@@ -51,6 +56,11 @@ class TurbineServiceProvider extends ServiceProvider
             TurbineControllerMakeCommand::class,
             TurbineModelMakeCommand::class,
             TurbineConsoleMakeCommand::class,
+            DomainActionMakeCommand::class,
+            DomainCastMakeCommand::class,
+            DomainControllerMakeCommand::class,
+            DomainModelMakeCommand::class,
+            DomainConsoleMakeCommand::class,
             // MenuModelMakeCommand::class,
         ]);
     }
