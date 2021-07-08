@@ -8,6 +8,8 @@
         @include('admin.menus.select-menu')
     @else
         @include('admin.menus.select-item-group')
+        
+        @include('admin.menus.select-item-template')
     @endif
 
     @include('admin.menus.title')
