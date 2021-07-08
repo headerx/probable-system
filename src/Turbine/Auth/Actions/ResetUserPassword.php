@@ -4,7 +4,6 @@ namespace Turbine\Auth\Actions;
 
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use LangleyFoxall\LaravelNISTPasswordRules\PasswordRules;
 use Laravel\Fortify\Contracts\ResetsUserPasswords;
 
 class ResetUserPassword implements ResetsUserPasswords
@@ -21,7 +20,7 @@ class ResetUserPassword implements ResetsUserPasswords
     public function reset($user, array $input)
     {
         Validator::make($input, [
-            'password' => array_merge($this->passwordRules(), ['max:100',], PasswordRules::changePassword($user->email)),
+            'password' => array_merge($this->passwordRules(), ['max:100',]),
         ])->validate();
 
         $user->forceFill([
