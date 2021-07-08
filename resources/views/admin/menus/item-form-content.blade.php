@@ -16,6 +16,8 @@
 
     <div x-cloak x-show="menuType !='{{ \Turbine\Menus\Enums\MenuItemTypeEnum::menu_link() }}' && menuType !='{{ \Turbine\Menus\Enums\MenuItemTypeEnum::page_link() }}'">
         @include('admin.menus.link')
+
+        @include('admin.menus.select-target')
     </div>
 
     <div x-cloak x-show="menuType ==='{{ \Turbine\Menus\Enums\MenuItemTypeEnum::page_link() }}' ">

@@ -34,6 +34,7 @@
                 @else
                     <x-sidebar-link
                         href="{{ $menuItem->uri }}"
+                        target="{{ $menuItem->target }}"
                         :active="requestPathIs($menuItem->uri) ||
                             (
                                 $menuItem->children()->exists() &&

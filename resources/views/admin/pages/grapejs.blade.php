@@ -34,17 +34,27 @@
 <script type="text/javascript">
 document.addEventListener('livewire:load', function () {
 
+    CKEDITOR.dtd.$editable.span = 1
+    // CKEDITOR.dtd.$editable.a = 1
+    // CKEDITOR.dtd.$editable.td = 1
+    // CKEDITOR.dtd.$editable.tr = 1
+    // CKEDITOR.dtd.$editable.table = 1
+
     window.grapesjsEditor = grapesjs.init({
         container : '#gjs',
         components: {!! json_encode(isset($state['html']) ? $state['html'] : '') !!},
         style: {!! json_encode(isset($state['css']) ? $state['css'] : '') !!},
         showDevices: false,
         noticeOnUnload: false,
-        plugins: ['gjs-preset-webpage', 'gjs-plugin-ckeditor'],
+        plugins: [
+            'gjs-preset-webpage',
+            'gjs-plugin-ckeditor'
+        ],
+     
         pluginsOpts: {
-            'gjs-plugin-ckeditor': {!! json_encode(config('core.ckeditor.grapejs')) !!}
+            'gjs-plugin-ckeditor': {!! json_encode(config('turbine.ckeditor.grapejs')) !!}
         },
-
+    
 
         storageManager: {
             type: 'none',
@@ -143,30 +153,30 @@ document.addEventListener('livewire:load', function () {
         ]
     );
 
-    const rte = editor.RichTextEditor;
+//     const rte = editor.RichTextEditor;
 
-// An example with fontSize
-rte.add('fontSize', {
-  icon: `<select class="gjs-field">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-      </select>`,
-    // Bind the 'result' on 'change' listener
-  event: 'change',
-  result: (rte, action) => rte.exec('fontSize', action.btn.firstChild.value),
-  // Callback on any input change (mousedown, keydown, etc..)
-  update: (rte, action) => {
-    const value = rte.doc.queryCommandValue(action.name);
-    if (value != 'false') { // value is a string
-      action.btn.firstChild.value = value;
-    }
-   }
-  })
+// // An example with fontSize
+// rte.add('fontSize', {
+//   icon: `<select class="gjs-field">
+//         <option>1</option>
+//         <option>2</option>
+//         <option>3</option>
+//         <option>4</option>
+//         <option>5</option>
+//         <option>6</option>
+//         <option>7</option>
+//       </select>`,
+//     // Bind the 'result' on 'change' listener
+//   event: 'change',
+//   result: (rte, action) => rte.exec('fontSize', action.btn.firstChild.value),
+//   // Callback on any input change (mousedown, keydown, etc..)
+//   update: (rte, action) => {
+//     const value = rte.doc.queryCommandValue(action.name);
+//     if (value != 'false') { // value is a string
+//       action.btn.firstChild.value = value;
+//     }
+//    }
+//   })
 
 
     // Run a callback when an event ("foo") is emitted from this component
