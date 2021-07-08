@@ -57,14 +57,14 @@ class RouteServiceProvider extends ServiceProvider
                     $router->impersonate();
                 });
             
-            if (app()->environment(['production'])) {
+            // if (app()->environment(['production'])) {
 
-                if (Schema::hasTable('pages')) {
-                    foreach (Page::onlyActive()->get() as $page) {
-                        Route::get($page->slug, [PageController::class, 'show']);
-                    }
-                }
-            }
+            //     if (Schema::hasTable('pages')) {
+            //         foreach (Page::onlyActive()->get() as $page) {
+            //             Route::get($page->slug, [PageController::class, 'show']);
+            //         }
+            //     }
+            // }
         });
     }
 
