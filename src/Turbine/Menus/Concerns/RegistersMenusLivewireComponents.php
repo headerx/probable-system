@@ -2,7 +2,7 @@
 
 namespace Turbine\Menus\Concerns;
 
-use Livewire;
+use Livewire\Livewire;
 use Turbine\Menus\Http\Livewire\Admin\AdminNavigationMenu;
 use Turbine\Menus\Http\Livewire\Admin\AdminSidebarMenu;
 use Turbine\Menus\Http\Livewire\Admin\AdminSidebarToggler;

@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\Menu\Admin;
 
-use Livewire;
+use Livewire\Livewire;
 use Tests\TestCase;
 use Turbine\Icons\Models\Icon;
 use Turbine\Menus\Enums\MenuItemTypeEnum;
