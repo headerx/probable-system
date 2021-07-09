@@ -65,8 +65,8 @@ class CreatePagesTable extends Migration
             $table->id();
             $table->uuid('uuid');
             $table->string('name');
-            $table->text('html');
-            $table->text('css')->nullable();
+            $table->longText('html');
+            $table->longText('css')->nullable();
             $table->integer('sort')->nullable();
             $table->text('meta')->nullable();
             $table->timestamps();
